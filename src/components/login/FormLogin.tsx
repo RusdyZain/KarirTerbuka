@@ -31,12 +31,26 @@ export default function FormLogin() {
                             <a href="#" className="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">Lupa Password?</a>
                         </div>
                         <button type="submit" className="w-full text-white bg-[#2570EB] font-medium rounded-lg text-sm px-5 py-2.5 text-center">Masuk</button>
-                        <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                            Belum punya akun? <a href="#" className="font-medium text-primary-600 hover:underline dark:text-primary-500">Daftar</a>
+                        <hr className="h-px my-8 bg-[#2570EB] border-0"></hr>
+                        <h2 className="text-lg text-center font-medium pt-2">Atau masuk menggunakan</h2>
+                        <div className="flex flex-row gap-6 place-content-center pt-5 pb-5">
+                            <div className="basis-1/2 grid justify-items-end">
+                                <button>
+                                    <Image className="w-12 h-12" src="https://www.svgrepo.com/show/448224/facebook.svg" loading="lazy" alt="Facebook logo" width={0} height={0} />
+                                </button>
+                            </div>
+                            <div className="basis-1/2 grid justify-items-start">
+                                <button>
+                                    <Image className="w-10 h-10" src="https://www.svgrepo.com/show/475656/google-color.svg" loading="lazy" alt="Google logo" width={0} height={0} />
+                                </button>
+                            </div>
+                        </div>
+                        <p className="text-lg text-black text-center font-medium">
+                            Belum punya akun? <a href="#" className="font-medium text-[#2570EB] hover:underline dark:text-[#2570EB]">Daftar</a>
                         </p>
                     </form>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
