@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from "next/link";
 
 export default function FormLogin() {
     return (
@@ -11,13 +12,11 @@ export default function FormLogin() {
                 </div>
                 <div className="w-full md:mt-0 sm:max-w-md xl:p-0">
                     <form className="space-y-4 md:space-y-2" action="#">
-                        <div>
-                            <label htmlFor="email" className="text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+                        <div className="my-6">
                             <input type="email" name="email" id="email" className="bg-gray-50 border border-[#526077] sm:text-sm rounded-lg block w-full p-2.5" placeholder="Email" required={true} />
                         </div>
                         <div>
-                            <label htmlFor="password" className="text-sm font-medium text-gray-900 dark:text-white">Password</label>
-                            <input type="password" name="password" id="password" placeholder="••••••••" className="bg-gray-50 border border-[#526077] sm:text-sm rounded-lg block w-full p-2.5" required={true} />
+                            <input type="password" name="password" id="password" placeholder="Password" className="bg-gray-50 border border-[#526077] sm:text-sm rounded-lg block w-full p-2.5" required={true} />
                         </div>
                         <div className="flex items-center justify-between">
                             <div className="flex items-start mt-2 mb-2">
@@ -28,10 +27,10 @@ export default function FormLogin() {
                                     <label htmlFor="remember" className="text-gray-500 dark:text-gray-500">Ingat Saya</label>
                                 </div>
                             </div>
-                            <a href="#" className="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">Lupa Password?</a>
+                            <Link href="#" className="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">Lupa Password?</Link>
                         </div>
                         <button type="submit" className="w-full text-white bg-[#2570EB] font-medium rounded-lg text-sm px-5 py-2.5 text-center">Masuk</button>
-                        <hr className="h-px my-8 bg-[#2570EB] border-0"></hr>
+                        <hr className="h-px my-6 bg-[#2570EB] border-0"></hr>
                         <h2 className="text-lg text-center font-medium pt-2">Atau masuk menggunakan</h2>
                         <div className="flex flex-row gap-6 place-content-center pt-5 pb-5">
                             <div className="basis-1/2 grid justify-items-end">
@@ -46,7 +45,7 @@ export default function FormLogin() {
                             </div>
                         </div>
                         <p className="text-lg text-black text-center font-medium">
-                            Belum punya akun? <a href="#" className="font-medium text-[#2570EB] hover:underline dark:text-[#2570EB]">Daftar</a>
+                            Belum punya akun? <Link href="login-register/register" className="font-medium text-[#2570EB] hover:underline dark:text-[#2570EB]">Daftar</Link>
                         </p>
                     </form>
                 </div>
