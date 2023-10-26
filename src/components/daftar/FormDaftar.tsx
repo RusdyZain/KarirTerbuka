@@ -6,23 +6,23 @@ export default function FormDaftar() {
     const [selectedDate, setSelectedDate] = useState(null);
     return (
         <div className="mt-10 w-9/12">
-            <div className="my-2">
+            <div className="mt-6">
                 <h2 className="text-base font-semibold">Nama Lengkap</h2>
                 <input type="text" name="nama_lengkap" className="mt-2 bg-gray-50 border border-[#526077] sm:text-sm rounded-lg block w-full p-2.5" placeholder="Tulis Nama Lengkap" required={true} />
             </div>
-            <div className="my-2">
+            <div className="mt-6">
                 <h2 className="text-base font-semibold">Email Pengguna</h2>
                 <input type="email" name="email_pendaftar" className="mt-2 bg-gray-50 border border-[#526077] sm:text-sm rounded-lg block w-full p-2.5" placeholder="Tulis Email Anda" required={true} />
             </div>
-            <div className="my-2">
+            <div className="mt-6">
                 <h2 className="text-base font-semibold">Sandi</h2>
                 <input type="password" name="sandi_pendaftar" className="mt-2 bg-gray-50 border border-[#526077] sm:text-sm rounded-lg block w-full p-2.5" placeholder="Tulis Sandi Anda" required={true} />
             </div>
-            <div className="my-2">
+            <div className="mt-6">
                 <h2 className="text-base font-semibold">Masukkan Ulang Sandi</h2>
                 <input type="password" name="sandi_konfirmasi" className="mt-2 bg-gray-50 border border-[#526077] sm:text-sm rounded-lg block w-full p-2.5" placeholder="Tuliskan Ulang Sandi" required={true} />
             </div>
-            <div className="my-2 flex flex-row gap-2">
+            <div className="mt-6 flex flex-row gap-2">
                 <div className="basis-1/2">
                     <h2 className="text-base font-semibold">Tanggal Lahir</h2>
                     <div className="mt-2 bg-gray-50 border border-[#526077] sm:text-sm rounded-lg w-full p-2.5 flex flex-row gap-2">

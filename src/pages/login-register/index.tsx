@@ -4,7 +4,7 @@ import ImageLogin from '@/components/login/ImageLogin';
 
 export default function Login() {
     return (
-        <>
+        <div data-theme="light">
             <div className="flex flex-row">
                 <div className="basis-1/2">
                     <ImageLogin />
@@ -13,6 +13,6 @@ export default function Login() {
                     <FormLogin />
                 </div>
             </div>
-        </>
+        </div>
     );
 };
