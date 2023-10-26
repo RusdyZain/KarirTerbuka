@@ -16,7 +16,7 @@ export default function FormLogin() {
                             <input type="email" name="email" id="email" className="bg-gray-50 border border-[#526077] sm:text-sm rounded-lg block w-full p-2.5" placeholder="Email" required={true} />
                         </div>
                         <div>
-                            <input type="password" name="password" id="password" placeholder="Password" className="bg-gray-50 border border-[#526077] sm:text-sm rounded-lg block w-full p-2.5" required={true} />
+                            <input type="password" name="password" id="password" placeholder="Sandi" className="bg-gray-50 border border-[#526077] sm:text-sm rounded-lg block w-full p-2.5" required={true} />
                         </div>
                         <div className="flex items-center justify-between">
                             <div className="flex items-start mt-2 mb-2">

@@ -12,12 +12,13 @@ export default function FormLogin() {
                 </div>
                 <h1 className="mt-3 text-3xl font-bold">Mendaftarkan Akun KarirTerbuka</h1>
                 <h4 className="mt-3 mb-3">Buat profil dan cari pekerjaan lebih mudah</h4>
-                <div className="w-6/12 my-6">
-                    <input type="email" name="email" id="email" className="bg-gray-50 border border-[#526077] sm:text-sm rounded-lg block w-full p-2.5" placeholder="Nomor Telepon" required={true} />
+                <div className="w-6/12 my-5">
+                    <input type="number" name="number_hp" className="bg-gray-50 border border-[#526077] sm:text-sm rounded-lg block w-full p-2.5" placeholder="Nomor Telepon" required={true} />
                 </div>
                 <div className="w-6/12">
-                    <input type="password" name="password" id="password" placeholder="Password" className="bg-gray-50 border border-[#526077] sm:text-sm rounded-lg block w-full p-2.5" required={true} />
+                    <input type="password" name="sandi_pengguna" placeholder="Sandi" className="bg-gray-50 border border-[#526077] sm:text-sm rounded-lg block w-full p-2.5" required={true} />
                 </div>
+                <button type="submit" className="mt-4 w-6/12 text-white bg-[#2570EB] font-medium rounded-lg text-sm px-5 py-2.5 text-center">Masuk</button>
                 <hr className="w-6/12 h-px my-8 bg-[#2570EB] border-0"></hr>
                 <button type="button" className="w-6/12 block bg-white hover:bg-gray-100 focus:bg-gray-100 text-gray-900 font-semibold rounded-lg px-4 py-3 border border-gray-300">
                     <div className="flex justify-start">
