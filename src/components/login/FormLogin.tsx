@@ -29,7 +29,7 @@ export default function FormLogin() {
                             </div>
                             <Link href="#" className="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">Lupa Password?</Link>
                         </div>
-                        <button type="submit" className="w-full text-white bg-[#2570EB] font-medium rounded-lg text-sm px-5 py-2.5 text-center">Masuk</button>
+                        <button type="submit" className="w-full text-white bg-[#2570EB] font-medium rounded-lg text-sm px-5 py-2.5 text-center hover:duration-200 hover:bg-white hover:text-[#2570EB] hover: border-solid border-2 border-[#2570EB]">Masuk</button>
                         <hr className="h-px my-6 bg-[#2570EB] border-0"></hr>
                         <h2 className="text-lg text-center font-medium pt-2">Atau masuk menggunakan</h2>
                         <div className="flex flex-row gap-6 place-content-center pt-5 pb-5">
