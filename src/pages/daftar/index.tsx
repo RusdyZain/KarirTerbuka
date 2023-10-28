@@ -17,7 +17,7 @@ export default function Daftar() {
                     </div>
                     <div className="basis-1/2">
                         <ImageDaftar />
-                        <h2 className="mt-6 text-2xl font-semibold">Berbagi oborolan bersama teman disabilitas</h2>
+                        <h2 className="mt-6 text-2xl font-semibold">Berbagi obrolan bersama teman disabilitas</h2>
                         <p className="mt-1 font-normal text-lg">Mari bergabung dan temukan koneksi kerja di komunitas Kami.</p>
                     </div>
                 </div>
