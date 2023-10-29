@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Header = () => {
   return (
     <>
-      <div className="flex pt-[9px]">
+      <div className="flex pt-[9px] justify-between">
         <div className="w-3/12 flex items-center pl-[102px]">
           <Image
             src="/logo_rafflesia.svg"
@@ -35,7 +35,7 @@ const Header = () => {
             </Link>
           </ul>
         </div>
-        <div className="w-3/12 justify-end">
+        <div className="pr-[106px] ">
           <Image
             src="/avatar_users.svg"
             alt="Logo Rafflesia"
