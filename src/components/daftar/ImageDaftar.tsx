@@ -3,7 +3,7 @@ import React from 'react';
 export default function ImageDaftar() {
     return (
         <div className="font-sans">
-            <div className="relative bg-[url('/ImgDaftar.png')] h-screen w-10/12 bg-cover pr-20">
+            <div className="relative bg-[url('/ImgDaftar.png')] h-screen w-full bg-cover pr-20">
                 <div className="bg-[#210F66] absolute bottom-0 left-0 w-full h-screen opacity-60 bg-no-repeat"></div>
                 <div className="absolute top-0 left-0 z-20 text-white ml-20 mt-20">
                     <h1 className="text-4xl font-semibold">Mulailah Dunia Karirmu</h1>

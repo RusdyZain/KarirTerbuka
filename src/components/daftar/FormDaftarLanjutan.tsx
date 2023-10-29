@@ -11,22 +11,28 @@ type DropdownProps = {
     onToggle: () => void;
 };
 
+const MAX_OPTION_LENGTH = 20; // Batasi panjang maksimum teks pilihan
+
+const trimOption = (option: string) => {
+    return option.length > MAX_OPTION_LENGTH ? `${option.substring(0, MAX_OPTION_LENGTH)}...` : option;
+};
+
 const Dropdown = ({ label, options, selectedValue, onValueChange, isOpen, onToggle }: DropdownProps) => (
-    <div className="dropdown mt-2">
+    <div className="dropdown mt-2 w-full">
         <label
             tabIndex={0}
-            className="justify-start w-[20rem] btn text-sm font-semibold bg-white border-[#2570EB] hover:bg-[#2570EB] hover:bg-opacity-20"
+            className="justify-start w-full btn text-xs font-semibold bg-white border-[#2570EB] hover:bg-[#2570EB] hover:bg-opacity-20"
             onClick={onToggle}
         >
             <FontAwesomeIcon icon={isOpen ? faAngleRight : faAngleDown} style={{ marginLeft: '8px' }} />
-            {selectedValue}
+            {trimOption(selectedValue)} {/* Menggunakan fungsi trimOption */}
         </label>
         <ul
             tabIndex={0}
-            className={`dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-[20rem] ${isOpen ? 'open' : ''}`}
+            className={`dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-full ${isOpen ? 'open' : ''}`}
         >
             {options.map((option) => (
-                <li key={option} onClick={() => onValueChange(option)}><a>{option}</a></li>
+                <li key={option} onClick={() => onValueChange(option)}><a>{(option)}</a></li>
             ))}
         </ul>
     </div>
@@ -51,7 +57,7 @@ export default function FormDaftar() {
     const [isSubcityDropdownOpen, setIsSubcityDropdownOpen] = useState(false);
 
     return (
-        <div className="mt-6 w-10/12">
+        <div className="mt-6 w-11/12">
             <div className="mt-6 grid grid-cols-2 gap-2">
                 <div>
                     <h2 className="text-lg font-semibold">Jenis Kelamin</h2>
@@ -99,23 +105,23 @@ export default function FormDaftar() {
                 </div>
                 <div className="mt-4">
                     <h2 className="text-lg font-semibold mb-2 ">Unggah KTP (PDF, Max 3 MB)</h2>
-                    <input type="file" className="file-input file-input-bordered file-input-primary w-[20rem]" />
+                    <input type="file" className="file-input file-input-bordered file-input-primary w-full" />
                 </div>
                 <div className="mt-4">
                     <h2 className="text-lg font-semibold mb-2 ">Unggah CV (PDF, Max 3 MB)</h2>
-                    <input type="file" className="file-input file-input-bordered file-input-primary w-[20rem]" />
+                    <input type="file" className="file-input file-input-bordered file-input-primary w-full" />
                 </div>
                 <div className="mt-4 col-span-2">
                     <h2 className="text-lg font-semibold mb-2 ">Detail Halaman</h2>
-                    <input type="text" placeholder="Ceritakan hambatanmu secara singkat" className="input input-bordered input-primary w-[42.5rem] h-32" />
+                    <input type="text" placeholder="Ceritakan hambatanmu secara singkat" className="input input-bordered input-primary w-full h-32" />
                 </div>
                 <div className="mt-4 col-span-2">
                     <h2 className="text-lg font-semibold mb-2 ">Minat</h2>
-                    <input type="text" placeholder="Sebutkan minat atau hobimu secara singkat" className="input input-bordered input-primary w-[42.5rem]" />
+                    <input type="text" placeholder="Sebutkan minat atau hobimu secara singkat" className="input input-bordered input-primary w-full" />
                 </div>
                 <div className="mt-4 col-span-2">
                     <h2 className="text-lg font-semibold mb-2 ">Alat Bantu</h2>
-                    <input type="text" placeholder="Tuliskan alat bantu yang biasa kamu gunakan" className="input input-bordered input-primary w-[42.5rem]" />
+                    <input type="text" placeholder="Tuliskan alat bantu yang biasa kamu gunakan" className="input input-bordered input-primary w-full" />
                     <p className="mt-1">*Tulis alat bantu yang biasa anda gunakan ketika bekerja</p>
                 </div>
             </div>
