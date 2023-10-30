@@ -70,8 +70,8 @@ const Beranda = () => {
         {/* awal quotes */}
         <div className="container bg-blue-800 max-w-full pb-0 h-[252.51px] text-2xl font-lato font-semibold text-center py-11  px-40">
           <p className="  text-white pt-2.5">
-            “Ketika saya bertemu orang-orang sukses saya bertanya sekitar 100
-            pertanyaan untuk mengetahui atribut keberhasilan mereka. Hal ini
+            &ldquo;Ketika saya bertemu orang-orang sukses saya bertanya sekitar
+            100 pertanyaan untuk mengetahui atribut keberhasilan mereka. Hal ini
             biasanya sama:{' '}
             <span className=" font-semibold text-yellow-500">kegigihan</span>,
             <span className=" font-semibold text-yellow-500"> kerja keras</span>{' '}
@@ -79,7 +79,7 @@ const Beranda = () => {
             <span className=" font-semibold text-yellow-500">
               mempekerjakan orang baik
             </span>
-            ”
+            &rdquo;
           </p>
           <p className=" font-semibold text-yellow-500 pt-2.5 pb-[45.47px]">
             __ Kiana Tom __
@@ -109,10 +109,42 @@ const Beranda = () => {
           </div>
         </section>
         {/* saran akhir */}
-        <div >
+        <div>
           {/*Card awal  */}
           <CardBeranda />
           {/*Card akhir  */}
+        </div>
+        <div className="flex  pl-[102px] pt-[70px] pr-[106px] pb-[500px] ">
+          <div className="w-2/4 justify-start">gambar kiri</div>
+          <div className="w-[612.85px] text-right">
+            <h2 className="text-5xl font-semibold w-[613px]">
+              Temukan{' '}
+              <span className="text-5xl font-semibold text-blue-600">
+                Komunitas
+              </span>{' '}
+              Terbaikmu Disini
+            </h2>
+            <p className="w-[608.76px] text-[20px] pt-2.5 font-medium pb-14">
+              &ldquo;Mencari komunitas adalah seperti mencari rumah baru. Ini
+              tentang menemukan tempat yang cocok untukmu di mana kamu bisa
+              berbagi minat dan pengalaman dengan orang-orang yang
+              serupa.&rdquo;
+            </p>
+            <div className="flex justify-end items-center pt-2.5">
+              <button
+                type="button"
+                className="font-semibold text-xl text-white bg-blue-600 flex gap-1 items-center py-3 px-7 rounded-lg"
+              >
+                Temukan
+                <Image
+                  src="/temukan.svg"
+                  alt="ellipse"
+                  width={17.06}
+                  height={17.74}
+                />
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

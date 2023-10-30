@@ -1,7 +1,7 @@
 import Image from 'next/image';
 const CardBeranda = () => {
   return (
-    <div className="grid grid-cols-3 gap-10 pt-14 pl-[102px] pb-[500px] pr-[106px] ">
+    <div className="grid grid-cols-3 gap-10 pt-14 pl-[102px]  pr-[106px] ">
       {/* card 1 awal */}
       <div className=" border-gray-500 p-4 gap-x-4 rounded-lg border-2">
         <div className="flex ">
