@@ -10,6 +10,13 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    screens: {
+      sm: { max: "360px" },
+
+      md: { max: "834px" },
+
+      lg: { max: "1440px" },
+    },
   },
   plugins: [require("daisyui")],
   daisyui: {

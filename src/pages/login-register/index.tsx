@@ -4,14 +4,12 @@ import ImageLogin from '@/components/login/ImageLogin';
 
 export default function Login() {
     return (
-        <div data-theme="light">
-            <div className="flex flex-row">
-                <div className="basis-1/2">
+        <div data-theme="light" className="sm:h-screen">
+            <div className="grid grid-cols-2 sm:grid-cols-1">
+                <div className="sm:hidden">
                     <ImageLogin />
                 </div>
-                <div className='basis-1/2'>
-                    <FormLogin />
-                </div>
+                <FormLogin />
             </div>
         </div>
     );

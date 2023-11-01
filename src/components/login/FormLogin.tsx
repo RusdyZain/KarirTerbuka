@@ -5,15 +5,16 @@ import Link from "next/link";
 export default function FormLogin() {
     return (
         <div className="font-sans">
-            <div className="flex flex-col items-center justify-center md:h-screen">
+            <div className="flex flex-col items-center justify-center lg:h-screen">
                 <div className="flex flex-row place-content-center gap-4">
                     <Image src="/logo.png" alt="" width={100} height={40} />
-                    <h1 className="place-items-center font-sans text-7xl font-medium text-[#2570EB]">Login</h1>
+                    <h1 className="place-items-center font-sans text-7xl font-medium text-[#2570EB] sm:hidden">Login</h1>
                 </div>
-                <div className="w-full md:mt-0 sm:max-w-md xl:p-0">
-                    <form className="space-y-4 md:space-y-2" action="#">
+                <h1 className="hidden place-items-center font-sans text-2xl font-bold sm:block sm:mb-10 sm:mt-2">Selamat Datang Kembali</h1>
+                <div className="w-8/12 sm:w-11/12 lg:mt-0 sm:max-w-lg">
+                    <form className="space-y-4 lg:space-y-2" action="#">
                         <div className="my-6">
-                            <input type="email" name="email" id="email" className="bg-gray-50 border border-[#526077] sm:text-sm rounded-lg block w-full p-2.5" placeholder="Email" required={true} />
+                            <input type="email" name="email" id="email" className=" bg-gray-50 border border-[#526077] sm:text-sm rounded-lg sm:rounded-lg block w-full p-2.5" placeholder="Email" required={true} />
                         </div>
                         <div>
                             <input type="password" name="password" id="password" placeholder="Sandi" className="bg-gray-50 border border-[#526077] sm:text-sm rounded-lg block w-full p-2.5" required={true} />
