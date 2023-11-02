@@ -11,11 +11,11 @@ module.exports = {
   theme: {
     extend: {},
     screens: {
-      sm: { max: "360px" },
+      sm: { max: "767px" },
 
-      md: { max: "834px" },
+      md: { min: "768px", max: "834px" },
 
-      lg: { max: "1440px" },
+      lg: { min: "1440px" },
     },
   },
   plugins: [require("daisyui")],

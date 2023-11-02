@@ -4,13 +4,13 @@ import Link from "next/link";
 
 export default function FormLogin() {
     return (
-        <div className="font-sans">
-            <div className="flex flex-col items-center justify-center lg:h-screen">
+        <div className="font-sans md:w-full">
+            <div className="flex flex-col items-center justify-center h-screen sm:h-screen">
                 <div className="flex flex-row place-content-center gap-4">
                     <Image src="/logo.png" alt="" width={100} height={40} />
-                    <h1 className="place-items-center font-sans text-7xl font-medium text-[#2570EB] sm:hidden">Login</h1>
+                    <h1 className="place-items-center font-sans text-7xl font-medium text-[#2570EB] sm:hidden md:hidden">Login</h1>
                 </div>
-                <h1 className="hidden place-items-center font-sans text-2xl font-bold sm:block sm:mb-10 sm:mt-2">Selamat Datang Kembali</h1>
+                <h1 className="hidden place-items-center font-sans text-2xl md:text-3xl font-bold sm:block md:block sm:mb-10 sm:mt-2">Selamat Datang Kembali</h1>
                 <div className="w-8/12 sm:w-11/12 lg:mt-0 sm:max-w-lg">
                     <form className="space-y-4 lg:space-y-2" action="#">
                         <div className="my-6">
