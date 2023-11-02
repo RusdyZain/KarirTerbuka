@@ -2,6 +2,7 @@ import Header from '@/components/Header';
 import Image from 'next/image';
 import Dropdown from '@/components/molekul/DropDown';
 import CardBeranda from '@/components/cards/card-beranda';
+import Link from 'next/link';
 
 const Beranda = () => {
   return (
@@ -114,9 +115,40 @@ const Beranda = () => {
           <CardBeranda />
           {/*Card akhir  */}
         </div>
-        <div className="flex  pl-[102px] pt-[70px] pr-[106px] pb-[500px] ">
-          <div className="w-2/4 justify-start">gambar kiri</div>
-          <div className="w-[612.85px] text-right">
+        <div className="flex   pt-[70px]">
+          <div className="w-2/4 relative">
+            <div className=" pt-[133px] ">
+              <Image
+                src="/Ellipse-full.svg"
+                alt="ellipse"
+                width={577.13}
+                height={579.66}
+                className="absolute right-0"
+              />
+              <Image
+                src="/Ellipse2-2.svg"
+                alt="ellipse"
+                width={411.11}
+                height={412.5}
+                className="absolute left-0 pt-20"
+              />
+              <Image
+                src="/EllipseOne.svg"
+                alt="ellipse"
+                width={300}
+                height={190.01}
+                className="absolute px-8 "
+              />
+              <Image
+                src="/hero2.png"
+                alt="ellipse"
+                width={774.33}
+                height={511.7}
+                className="absolute left-0"
+              />
+            </div>
+          </div>
+          <div className="w-[612.85px] text-right mx-11">
             <h2 className="text-5xl font-semibold w-[613px]">
               Temukan{' '}
               <span className="text-5xl font-semibold text-blue-600">
@@ -145,6 +177,237 @@ const Beranda = () => {
               </button>
             </div>
           </div>
+        </div>
+
+        {/* brida logo awal */}
+        <div className="pt-60">
+          <div className="container flex absolute bg-blue-800  h-[252.51px] text-2xl  justify-between px-48">
+            <Image
+              src="/brida.svg"
+              alt="ellipse"
+              width={212.52}
+              height={64.15}
+            />
+            <Image
+              src="/brida.svg"
+              alt="ellipse"
+              width={212.52}
+              height={64.15}
+            />
+            <Image
+              src="/brida.svg"
+              alt="ellipse"
+              width={212.52}
+              height={64.15}
+            />
+            <Image
+              src="/brida.svg"
+              alt="ellipse"
+              width={212.52}
+              height={64.15}
+            />
+          </div>
+        </div>
+        {/* brida logo akhir */}
+        {/* gudide awal  */}
+        <div className=" pt-80 pl-[102px]  pr-[106px]">
+          <div>
+            <h2 className="text-5xl text-center font-lato font-medium">
+              Bagaimana membantu anda?
+            </h2>
+            <div className="flex pt-12 px-5">
+              <div className="border-4 border-gray-400 rounded-lgo px-[18px] py-8 rounded-lg">
+                <Image
+                  src="/softwarecodepana.png"
+                  alt="ellipse"
+                  width={313}
+                  height={211}
+                  className="mx-auto"
+                />
+
+                <h3 className="text-2xl font-lato text-center font-semibold ">
+                  Daftarkan Diri Anda dan Temukan Pekerjaan
+                </h3>
+                <p className=" text-lg pt-[30px]">
+                  Langkah pertama adalah dengan membuat akun di KarirTerbuka.
+                  Setelah itu, Anda dapat mencari informasi tentang lowongan
+                  pekerjaan yang sesuai dengan minat dan keterampilan Anda, dan
+                  bergabung dengan komunitas yang relevan di platform ini.
+                </p>
+              </div>
+              <Image
+                src="/arrow.svg"
+                alt="ellipse"
+                width={67}
+                height={211}
+                className="mx-auto"
+              />
+              <div className="border-4 border-gray-400 rounded-lgo px-[18px] py-8 rounded-lg">
+                <Image
+                  src="/softwarecodepana.png"
+                  alt="ellipse"
+                  width={313}
+                  height={211}
+                  className="mx-auto"
+                />
+                <h3 className="text-2xl font-lato text-center font-semibold">
+                  Daftarkan Diri Anda dan Temukan Pekerjaan
+                </h3>
+                <p className=" text-lg pt-[30px]">
+                  Langkah pertama adalah dengan membuat akun di KarirTerbuka.
+                  Setelah itu, Anda dapat mencari informasi tentang lowongan
+                  pekerjaan yang sesuai dengan minat dan keterampilan Anda, dan
+                  bergabung dengan komunitas yang relevan di platform ini.
+                </p>
+              </div>
+              <Image
+                src="/arrow.svg"
+                alt="ellipse"
+                width={67}
+                height={211}
+                className="mx-auto"
+              />
+              <div className="border-4 border-gray-400 rounded-lgo px-[18px] py-8 rounded-lg">
+                <Image
+                  src="/softwarecodepana.png"
+                  alt="ellipse"
+                  width={313}
+                  height={211}
+                  className="mx-auto"
+                />
+                <h3 className="text-2xl font-lato text-center  font-semibold">
+                  Daftarkan Diri Anda dan Temukan Pekerjaan
+                </h3>
+                <p className=" text-lg pt-[30px]">
+                  Langkah pertama adalah dengan membuat akun di KarirTerbuka.
+                  Setelah itu, Anda dapat mencari informasi tentang lowongan
+                  pekerjaan yang sesuai dengan minat dan keterampilan Anda, dan
+                  bergabung dengan komunitas yang relevan di platform ini.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* guidie akhir */}
+        {/* testimoni awal */}
+        <div className="pt-28 pl-[102px] px-[105px]">
+          <h2 className="text-5xl font-lato font-medium text-center">
+            Apa Kata Mereka
+          </h2>
+          <div className="grid grid-cols-3  pt-12 px-5 gap-20">
+            <div className="border-4 border-gray-400 rounded-lgo px-[35px] py-8 rounded-lg">
+              <Image src="/start.svg" alt="ellipse" width={120} height={18} />
+              <p className=" text-lg pt-[30px] text-center font-medium">
+                &ldquo;Saya sangat bersyukur menemukan platform ini. Mereka
+                memiliki banyak lowongan pekerjaan sesuai kebutuhan saya dan
+                memberikan dukungan luar biasa dalam mencari pekerjaan.&ldquo;
+              </p>
+              <div className=" flex items-center pb-2 pt-8">
+                <Image
+                  src="/avatar_users.svg"
+                  alt="Logo Rafflesia"
+                  width={65}
+                  height={65}
+                  className="rounded-full pt-4 "
+                />
+                <div className="px-4 pt-3">
+                  <h2 className=" font-semibold">Alleta</h2>
+                  <p className=" font-semibold text-gray-600">
+                    House Keeping Ratu Laut
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="border-4 border-gray-400 rounded-lgo px-[35px] py-8 rounded-lg">
+              <Image src="/start.svg" alt="ellipse" width={120} height={18} />
+              <p className=" text-lg pt-[30px] text-center font-medium">
+                &ldquo;Saya sangat bersyukur menemukan platform ini. Mereka
+                memiliki banyak lowongan pekerjaan sesuai kebutuhan saya dan
+                memberikan dukungan luar biasa dalam mencari pekerjaan.&ldquo;
+              </p>
+              <div className=" flex items-center pb-2 pt-8">
+                <Image
+                  src="/avatar_users.svg"
+                  alt="Logo Rafflesia"
+                  width={65}
+                  height={65}
+                  className="rounded-full pt-4 "
+                />
+                <div className="px-4 pt-3">
+                  <h2 className=" font-semibold">Alleta</h2>
+                  <p className=" font-semibold text-gray-600">
+                    House Keeping Ratu Laut
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="border-4 border-gray-400 rounded-lgo px-[35px] py-8 rounded-lg">
+              <Image src="/start.svg" alt="ellipse" width={120} height={18} />
+              <p className=" text-lg pt-[30px] text-center font-medium">
+                &ldquo;Saya sangat bersyukur menemukan platform ini. Mereka
+                memiliki banyak lowongan pekerjaan sesuai kebutuhan saya dan
+                memberikan dukungan luar biasa dalam mencari pekerjaan.&ldquo;
+              </p>
+              <div className=" flex items-center pb-2 pt-8">
+                <Image
+                  src="/avatar_users.svg"
+                  alt="Logo Rafflesia"
+                  width={65}
+                  height={65}
+                  className="rounded-full pt-4 "
+                />
+                <div className="px-4 pt-3">
+                  <h2 className=" font-semibold">Alleta</h2>
+                  <p className=" font-semibold text-gray-600">
+                    House Keeping Ratu Laut
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* testimoni akhir */}
+
+        <div className="pt-44">
+          <footer className="bg-blue-600 py-16   ">
+            <div className="flex text-white justify-center gap-6 text-2xl">
+              <Link href="/">Tentang Kami </Link>
+              <Link href="/">Kontak </Link>
+              <Link href="/">Pekerjaan </Link>
+              <Link href="/">Komunitas </Link>
+              <Link href="/">Blog</Link>
+            </div>
+            <div className="flex justify-center pt-12 gap-12 ">
+              <div className=" flex  justify-center items-center rounded-full border border-white h-[80px] w-[80px]">
+                <Image
+                  src="/iconyoutube.svg"
+                  alt="Logo Rafflesia"
+                  width={50}
+                  height={50}
+                />
+              </div>
+              <div className=" flex  justify-center items-center rounded-full border border-white h-[80px] w-[80px]">
+                <Image
+                  src="/devicon_facebook.svg"
+                  alt="Logo Rafflesia"
+                  width={50}
+                  height={50}
+                />
+              </div>
+              <div className=" flex  justify-center items-center rounded-full border border-white h-[80px] w-[80px]">
+                <Image
+                  src="/instagramicon.svg"
+                  alt="Logo Rafflesia"
+                  width={50}
+                  height={50}
+                />
+              </div>
+            </div>
+            <div className="flex text-white justify-center gap-6 text-2xl pt-4">
+              <p>Copyright 2023. All rights reserved. BSA Rafflesia</p>
+            </div>
+          </footer>
         </div>
       </div>
     </div>
