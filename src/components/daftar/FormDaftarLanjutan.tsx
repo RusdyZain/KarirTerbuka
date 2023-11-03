@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
@@ -11,32 +11,71 @@ type DropdownProps = {
     onToggle: () => void;
 };
 
-const MAX_OPTION_LENGTH = 20; // Batasi panjang maksimum teks pilihan
+const Dropdown = ({ label, options, selectedValue, onValueChange }: DropdownProps) => {
+    const [isOpen, setIsOpen] = useState(false);
+    const [isMobileScreen, setIsMobileScreen] = useState(false);
 
-const trimOption = (option: string) => {
-    return option.length > MAX_OPTION_LENGTH ? `${option.substring(0, MAX_OPTION_LENGTH)}...` : option;
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobileScreen(window.innerWidth <= 360);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        handleResize();
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    const trimOption = (option: string) => {
+        if (isMobileScreen) {
+            return option.length > 8 ? `${option.substring(0, 8)}...` : option;
+        } else {
+            return option.length > 20 ? `${option.substring(0, 20)}...` : option;
+        };
+    };
+
+    const handleToggle = () => {
+        setIsOpen(isOpen);
+    };
+
+    const handleOptionClick = (option: string) => {
+        onValueChange(option);
+        setIsOpen(false);
+    };
+
+    const handleLabelClick = () => {
+        if (isOpen) {
+            setIsOpen(false);
+        } else {
+            setIsOpen(true);
+        }
+    };
+
+    return (
+        <div className="dropdown mt-2 w-full sm:text-xs">
+            <label
+                tabIndex={0}
+                className="text-opacity-40 justify-start w-full btn text-sm sm:text-xs font-semibold bg-white border-[#2570EB] hover:bg-blue-200 hover-bg-opacity-20"
+                onClick={handleLabelClick}
+            >
+                <FontAwesomeIcon icon={isOpen ? faAngleDown : faAngleRight} style={{ marginLeft: '8px' }} />
+                {trimOption(selectedValue)}
+            </label>
+            <ul
+                tabIndex={0}
+                className={`overflow-y-auto max-h-48 dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-full ${isOpen ? 'block' : 'hidden'}`}
+            >
+                {options.map((option) => (
+                    <li key={option} onClick={() => handleOptionClick(option)}><a>{(option)}</a></li>
+                ))}
+            </ul>
+        </div>
+    );
 };
 
-const Dropdown = ({ label, options, selectedValue, onValueChange, isOpen, onToggle }: DropdownProps) => (
-    <div className="dropdown mt-2 w-full">
-        <label
-            tabIndex={0}
-            className="justify-start w-full btn text-xs font-semibold bg-white border-[#2570EB] hover:bg-[#2570EB] hover:bg-opacity-20"
-            onClick={onToggle}
-        >
-            <FontAwesomeIcon icon={isOpen ? faAngleRight : faAngleDown} style={{ marginLeft: '8px' }} />
-            {trimOption(selectedValue)} {/* Menggunakan fungsi trimOption */}
-        </label>
-        <ul
-            tabIndex={0}
-            className={`dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-full ${isOpen ? 'open' : ''}`}
-        >
-            {options.map((option) => (
-                <li key={option} onClick={() => onValueChange(option)}><a>{(option)}</a></li>
-            ))}
-        </ul>
-    </div>
-);
 
 export default function FormDaftar() {
     const genderOptions = ["Laki-Laki", "Perempuan"];
@@ -46,21 +85,19 @@ export default function FormDaftar() {
 
     const [selectedGender, setSelectedGender] = useState("L/P");
     const [selectedEducation, setSelectedEducation] = useState("Pendidikan");
-    const [selectedActivity, setSelectedActivity] = useState("Minat");
     const [selectedCity, setSelectedCity] = useState("Kabupaten");
     const [selectedSubcity, setSelectedSubcity] = useState("Kecamatan");
 
     const [isGenderDropdownOpen, setIsGenderDropdownOpen] = useState(false);
     const [isEducationDropdownOpen, setIsEducationDropdownOpen] = useState(false);
-    const [isActivityDropdownOpen, setIsActivityDropdownOpen] = useState(false);
     const [isCityDropdownOpen, setIsCityDropdownOpen] = useState(false);
     const [isSubcityDropdownOpen, setIsSubcityDropdownOpen] = useState(false);
 
     return (
-        <div className="mt-6 w-11/12">
+        <div className="mt-6 w-11/12 sm:w-full md:w-full">
             <div className="mt-6 grid grid-cols-2 gap-2">
                 <div>
-                    <h2 className="text-lg font-semibold">Jenis Kelamin</h2>
+                    <h2 className="text-lg sm:text-sm font-semibold">Jenis Kelamin</h2>
                     <Dropdown
                         label={selectedGender}
                         options={genderOptions}
@@ -71,7 +108,7 @@ export default function FormDaftar() {
                     />
                 </div>
                 <div>
-                    <h2 className="text-lg font-semibold">Pendidikan</h2>
+                    <h2 className="text-lg sm:text-sm font-semibold">Pendidikan</h2>
                     <Dropdown
                         label={selectedEducation}
                         options={educationOptions}
@@ -82,7 +119,7 @@ export default function FormDaftar() {
                     />
                 </div>
                 <div className="mt-4">
-                    <h2 className="text-lg font-semibold">Kabupaten</h2>
+                    <h2 className="text-lg sm:text-sm font-semibold">Kabupaten</h2>
                     <Dropdown
                         label={selectedCity}
                         options={cityOptions}
@@ -93,7 +130,7 @@ export default function FormDaftar() {
                     />
                 </div>
                 <div className="mt-4">
-                    <h2 className="text-lg font-semibold">Kecamatan</h2>
+                    <h2 className="text-lg sm:text-sm font-semibold">Kecamatan</h2>
                     <Dropdown
                         label={selectedSubcity}
                         options={getSubcityOptions(selectedCity)}
@@ -103,26 +140,36 @@ export default function FormDaftar() {
                         onToggle={() => setIsSubcityDropdownOpen(!isSubcityDropdownOpen)}
                     />
                 </div>
-                <div className="mt-4">
-                    <h2 className="text-lg font-semibold mb-2 ">Unggah KTP (PDF, Max 3 MB)</h2>
-                    <input type="file" className="file-input file-input-bordered file-input-primary w-full" />
+                <div className="mt-4 sm:col-span-2">
+                    <h2 className="text-lg sm:text-sm font-semibold mb-2 ">Unggah KTP (PDF, Max 3 MB)</h2>
+                    <form className="border border-spacing-2 rounded-md ">
+                        <label className="block">
+                            <span className="sr-only">Choose profile photo</span>
+                            <input type="file" className="file:h-10 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-500 file:text-white hover:file:bg-blue-600" />
+                        </label>
+                    </form>
                 </div>
-                <div className="mt-4">
-                    <h2 className="text-lg font-semibold mb-2 ">Unggah CV (PDF, Max 3 MB)</h2>
-                    <input type="file" className="file-input file-input-bordered file-input-primary w-full" />
+                <div className="mt-4 sm:col-span-2">
+                    <h2 className="text-lg sm:text-sm font-semibold mb-2 ">Unggah CV (PDF, Max 3 MB)</h2>
+                    <form className="border border-spacing-2 rounded-md ">
+                        <label className="block">
+                            <span className="sr-only">Choose profile photo</span>
+                            <input type="file" className="file:h-10 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-500 file:text-white hover:file:bg-blue-600" />
+                        </label>
+                    </form>
                 </div>
                 <div className="mt-4 col-span-2">
-                    <h2 className="text-lg font-semibold mb-2 ">Detail Halaman</h2>
-                    <input type="text" placeholder="Ceritakan hambatanmu secara singkat" className="input input-bordered input-primary w-full h-32" />
+                    <h2 className="text-lg sm:text-sm font-semibold mb-2">Detail Halaman</h2>
+                    <input type="text" placeholder="Ceritakan hambatanmu secara singkat" className="input input-bordered input-primary w-full h-32 sm:text-sm" />
                 </div>
                 <div className="mt-4 col-span-2">
-                    <h2 className="text-lg font-semibold mb-2 ">Minat</h2>
-                    <input type="text" placeholder="Sebutkan minat atau hobimu secara singkat" className="input input-bordered input-primary w-full" />
+                    <h2 className="text-lg sm:text-sm font-semibold mb-2 ">Minat</h2>
+                    <input type="text" placeholder="Sebutkan minat atau hobimu secara singkat" className="input input-bordered input-primary w-full sm:text-sm" />
                 </div>
                 <div className="mt-4 col-span-2">
-                    <h2 className="text-lg font-semibold mb-2 ">Alat Bantu</h2>
-                    <input type="text" placeholder="Tuliskan alat bantu yang biasa kamu gunakan" className="input input-bordered input-primary w-full" />
-                    <p className="mt-1">*Tulis alat bantu yang biasa anda gunakan ketika bekerja</p>
+                    <h2 className="text-lg sm:text-sm font-semibold mb-2 ">Alat Bantu</h2>
+                    <input type="text" placeholder="Tuliskan alat bantu yang biasa kamu gunakan" className="input input-bordered input-primary w-full sm:text-sm" />
+                    <p className="mt-1 sm:text-xs">*Tulis alat bantu yang biasa anda gunakan ketika bekerja</p>
                 </div>
             </div>
         </div>

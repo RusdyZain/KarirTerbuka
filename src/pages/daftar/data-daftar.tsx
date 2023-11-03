@@ -4,35 +4,38 @@ import ImageDaftar from '@/components/daftar/ImageDaftar';
 import FormDaftar from '@/components/daftar/FormDaftarLanjutan';
 import Link from "next/link";
 
-
 export default function Daftar() {
     return (
-        <div data-theme="light">
-            <div className="mx-20 mb-2 pt-2">
+        <div data-theme="light" className="h-full sm:h-full md:h-screen sm:pt-5">
+            <div className="mx-20 sm:mx-5 md:mx-8 mb-2 pt-2">
                 <Logo />
-                <div className="mt-2 grid grid-cols-2">
+                <div className="mt-2 grid grid-cols-2 sm:grid-cols-none md:grid-cols-none">
                     <div>
-                        <h1 className="text-4xl font-semibold">Informasi Umum</h1>
-                        <p className="mt-1">Buat profil, dan cari lowongan pekerjaan lebih mudah</p>
+                        <h1 className="text-4xl font-semibold sm:font-bold sm:text-2xl sm:text-center">Informasi Umum</h1>
+                        <p className="mt-1 sm:text-xs sm:text-center">Buat profil, dan cari lowongan pekerjaan lebih mudah</p>
                         <FormDaftar />
                     </div>
-                    <div>
+                    <div className="sm:hidden md:hidden">
                         <ImageDaftar />
                         <h2 className="mt-6 text-2xl font-semibold">Berbagi obrolan bersama teman disabilitas</h2>
                         <p className="mt-1 font-normal text-lg">Mari bergabung dan temukan koneksi kerja di komunitas Kami.</p>
                     </div>
                 </div>
                 <div className="grid grid-cols-2 w-full">
-                    <div className="grid grid-cols-2 mt-10 mb-5 bottom-0 left-0 w-8/12">
-                        <button className="text-xl text-black underline underline-offset-4 hover:no-underline text-start">Informasi Umum</button>
-                        <button className="text-xl text-[#2570EB] underline underline-offset-4 hover:no-underline text-start">Informasi Pendaftaran</button>
+                    <div className="grid grid-cols-2 mt-10 mb-5 bottom-0 left-0 w-8/12 sm:w-full md:w-full sm:grid-cols-1 text-xl sm:text-sm md:text-base">
+                        <button className="text-[#2570EB] underline underline-offset-4 hover:no-underline text-start w-10/12">Informasi Umum</button>
+                        <button className="text-black underline underline-offset-4 hover:no-underline text-start">Informasi Pendaftaran</button>
                     </div>
-                    <div>
-                        <div className="grid grid-cols-4 mt-10 mb-5 bottom-0 right-0 gap-4 w-10/12">
+                    <div className="w-full">
+                        <div className="grid grid-cols-4 sm:grid-cols-2 md:grid-cols-3 mt-10 mb-5 bottom-0 right-0 gap-4 w-full sm:w-full md:w-full">
+                            <div className="md:hidden"></div>
                             <div></div>
-                            <div></div>
-                            <button className="btn btn-outline btn-primary"><Link href="/daftar">Kembali</Link></button>
-                            <button className="btn btn-primary text-white"><Link href="#">Daftar</Link></button>
+                            <button type="button" className="py-[.688rem] sm:py-1 inline-flex justify-center items-center gap-2 sm:gap-0 rounded-md border-2 border-[#2570EB] font-semibold text-[#2570EB] hover:text-white hover:bg-blue-500 hover:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm sm:text-xs md:text-base dark:border-[#2570EB] dark:hover:border-blue-500">
+                                <Link href="/daftar">Kembali</Link>
+                            </button>
+                            <button type="button" className="py-3 px-4 sm:py-1 inline-flex justify-center items-center gap-2 sm:gap-0 rounded-md border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm sm:text-xs md:text-base dark:focus:ring-offset-white">
+                                <Link href="">Daftar</Link>
+                            </button>
                         </div>
                     </div>
                 </div>
