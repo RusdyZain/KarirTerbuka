@@ -41,7 +41,7 @@ const Header = () => {
             alt="Logo Rafflesia"
             width={40}
             height={40}
-            className="rounded-full pt-3 "
+            className="rounded-full pt-2 "
           />
         </div>
       </div>

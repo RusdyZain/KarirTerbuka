@@ -37,10 +37,6 @@ const Dropdown = ({ label, options, selectedValue, onValueChange }: DropdownProp
         };
     };
 
-    const handleToggle = () => {
-        setIsOpen(isOpen);
-    };
-
     const handleOptionClick = (option: string) => {
         onValueChange(option);
         setIsOpen(false);

@@ -7,6 +7,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "watusampu.palukota.go.id",
       },
+      {
+        protocol: "https",
+        hostname: "s3-alpha-sig.figma.com",
+      },
     ],
   },
 };
