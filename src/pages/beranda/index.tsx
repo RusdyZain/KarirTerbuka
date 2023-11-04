@@ -15,7 +15,7 @@ const Beranda = () => {
             <div>
               <p className="font-bold text-7xl py-5">
                 Cara Mudah Mendapatkan{' '}
-                <span className="text-blue-600">Pekerjaan Impian </span>Anda{' '}
+                <span className="text-blue-500">Pekerjaan Impian </span>Anda{' '}
               </p>
               <p className="text-2xl w-[602.14px] p-x-2.5 p-y-2.5">
                 Memberikan kemudahan untuk masyarakat penyandang disabilitas
@@ -74,15 +74,17 @@ const Beranda = () => {
             &ldquo;Ketika saya bertemu orang-orang sukses saya bertanya sekitar
             100 pertanyaan untuk mengetahui atribut keberhasilan mereka. Hal ini
             biasanya sama:{' '}
-            <span className=" font-semibold text-yellow-500">kegigihan</span>,
-            <span className=" font-semibold text-yellow-500"> kerja keras</span>{' '}
-            dan{' '}
-            <span className=" font-semibold text-yellow-500">
-              mempekerjakan orang baik
+            <span className=" font-semibold text-secondary-500">kegigihan</span>
+            <span className=" font-semibold text-secondary-500">
+              kerja keras
+            </span>{' '}
+            dan
+            <span className=" font-semibold text-secondary-500">
+              mempekerjakan orang baik{' '}
             </span>
             &rdquo;
           </p>
-          <p className=" font-semibold text-yellow-500 pt-2.5 pb-[45.47px]">
+          <p className=" font-semibold text-secondary-500 pt-2.5 pb-[45.47px]">
             __ Kiana Tom __
           </p>
         </div>
@@ -240,7 +242,7 @@ const Beranda = () => {
                 alt="ellipse"
                 width={67}
                 height={211}
-                className="mx-auto"
+                className="mx-auto px-1"
               />
               <div className="border-4 border-gray-400 rounded-lgo px-[18px] py-8 rounded-lg">
                 <Image
@@ -265,7 +267,7 @@ const Beranda = () => {
                 alt="ellipse"
                 width={67}
                 height={211}
-                className="mx-auto"
+                className="mx-auto px-1"
               />
               <div className="border-4 border-gray-400 rounded-lgo px-[18px] py-8 rounded-lg">
                 <Image

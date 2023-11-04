@@ -20,10 +20,10 @@ const CardBeranda = () => {
           </div>
         </div>
         <div className="flex gap-4 pt-6">
-          <button type="button" className=" bg-yellow-400 p-1 px-2 rounded-md">
+          <button type="button" className=" bg-secondary-500 p-1 px-2 rounded-md">
             Administrasi
           </button>
-          <button type="button" className=" bg-yellow-400 p-1 px-2 rounded-md">
+          <button type="button" className=" bg-secondary-500 p-1 px-2 rounded-md">
             Marketing
           </button>
         </div>
@@ -71,7 +71,7 @@ const CardBeranda = () => {
         {/* deskripsi card akhir */}
         <hr className="pt-4 border-t-2 border-gray-300" />
         <div className="flex justify-between px-2">
-          <p className="text-lg font-semibold text-yellow-600">
+          <p className="text-lg font-semibold text-secondary-700">
             Rp 1jt-Rp3jt/bulan
           </p>
           <button
@@ -101,10 +101,10 @@ const CardBeranda = () => {
           </div>
         </div>
         <div className="flex gap-4 pt-6">
-          <button type="button" className=" bg-yellow-400 p-1 px-2 rounded-md">
+          <button type="button" className=" bg-secondary-500 p-1 px-2 rounded-md">
             Administrasi
           </button>
-          <button type="button" className=" bg-yellow-400 p-1 px-2 rounded-md">
+          <button type="button" className=" bg-secondary-500 p-1 px-2 rounded-md">
             Marketing
           </button>
         </div>
@@ -152,7 +152,7 @@ const CardBeranda = () => {
         {/* deskripsi card akhir */}
         <hr className="pt-4 border-t-2 border-gray-300" />
         <div className="flex justify-between px-2">
-          <p className="text-lg font-semibold text-yellow-600">
+          <p className="text-lg font-semibold text-secondary-700">
             Rp 1jt-Rp3jt/bulan
           </p>
           <button
@@ -182,10 +182,10 @@ const CardBeranda = () => {
           </div>
         </div>
         <div className="flex gap-4 pt-6">
-          <button type="button" className=" bg-yellow-400 p-1 px-2 rounded-md">
+          <button type="button" className=" bg-secondary-500 p-1 px-2 rounded-md">
             Administrasi
           </button>
-          <button type="button" className=" bg-yellow-400 p-1 px-2 rounded-md">
+          <button type="button" className=" bg-secondary-500 p-1 px-2 rounded-md">
             Marketing
           </button>
         </div>
@@ -233,7 +233,7 @@ const CardBeranda = () => {
         {/* deskripsi card akhir */}
         <hr className="pt-4 border-t-2 border-gray-300" />
         <div className="flex justify-between px-2">
-          <p className="text-lg font-semibold text-yellow-600">
+          <p className="text-lg font-semibold text-secondary-700">
             Rp 1jt-Rp3jt/bulan
           </p>
           <button
