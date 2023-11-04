@@ -12,7 +12,7 @@ const Header = () => {
             width={54}
             height={44}
           />
-          <h1 className="text-2xl font-bold text-blue-600 pt-2 ">
+          <h1 className="text-2xl font-bold text-blue-600 ml-2 ">
             Karir Terbuka
           </h1>
         </div>
@@ -41,7 +41,7 @@ const Header = () => {
             alt="Logo Rafflesia"
             width={40}
             height={40}
-            className="rounded-full pt-4 "
+            className="rounded-full pt-3 "
           />
         </div>
       </div>
