@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div>
       <div className="flex pt-[9px] justify-between">
-        <div className="w-3/12 flex items-center pl-[102px]">
+        <div className=" flex items-center pl-[102px]">
           <Image
             src="/logo_rafflesia.svg"
             alt="Logo Rafflesia"
@@ -16,21 +16,21 @@ const Header = () => {
             Karir Terbuka
           </h1>
         </div>
-        <div className="w-6/12">
-          <ul className="flex justify-center space-x-4 font-semibold">
-            <Link href="/" className="mx-4 my-4">
+        <div className=" pr-[292px]">
+          <ul className="flex justify-center gap-12  font-semibold">
+            <Link href="/" className=" my-4">
               Beranda
             </Link>
-            <Link href="/" className="mx-4 my-4">
+            <Link href="/" className=" my-4">
               Pekerjaan
             </Link>
-            <Link href="/" className="mx-4 my-4">
+            <Link href="/" className=" my-4">
               Komunitas
             </Link>
-            <Link href="/" className="mx-4 my-4">
+            <Link href="/" className=" my-4">
               Blog
             </Link>
-            <Link href="/" className="mx-4 my-4">
+            <Link href="/" className=" my-4">
               Tentang
             </Link>
           </ul>
