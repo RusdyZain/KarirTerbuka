@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Header = () => {
   return (
     <>
-      <div className="flex pt-[9px] justify-between">
+      <div className="flex pt-[9px] justify-between bg-white" style={{ position: 'fixed', width: '100%', top: 0, left: 0, zIndex: 999 }}>
         <div className="w-3/12 flex items-center pl-[102px]">
           <Image
             src="/logo_rafflesia.svg"
@@ -17,7 +17,7 @@ const Header = () => {
           </h1>
         </div>
         <div className="w-6/12">
-          <ul className="flex justify-center space-x-4 font-semibold">
+          <ul className="flex justify-center space-x-4 font-semibold text-black gap-14">
             <Link href="/" className="mx-4 my-4">
               Beranda
             </Link>

@@ -10,10 +10,10 @@ import Galery from '@/components/komunitas/Galery'
 export default function Komunitas() {
     return (
         <div data-theme="light" className="h-full">
-            <div style={{ position: 'fixed', width: '100%', top: 0, left: 0, zIndex: 999 }} className="bg-white">
+            <div>
                 <Header />
             </div>
-            <div className="mt-14">
+            <div className="pt-14">
                 <ImageKomunitas />
             </div>
             <div className="py-20">
