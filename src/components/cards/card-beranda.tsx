@@ -3,7 +3,7 @@ const CardBeranda = () => {
   return (
     <div className="grid grid-cols-3 gap-10 pt-14 pl-[102px]  pr-[106px] ">
       {/* card 1 awal */}
-      <div className=" border-gray-500 p-4 gap-x-4 rounded-lg border-2">
+      <div className=" border-gray-500 p-4 gap-x-4 rounded-lg border-2 shadow-xl">
         <div className="flex ">
           <Image
             src="/foto-pekerjaan.png"
@@ -84,7 +84,7 @@ const CardBeranda = () => {
       </div>
       {/* card 1 akhir */}
       {/*  card 2 awal*/}
-      <div className=" border-gray-500 p-4 gap-x-4 rounded-lg border-2">
+      <div className=" border-gray-500 p-4 gap-x-4 rounded-lg border-2 shadow-xl">
         <div className="flex">
           <Image
             src="/foto-pekerjaan.png"
@@ -165,7 +165,7 @@ const CardBeranda = () => {
       </div>
       {/* card 2 akhir */}
       {/* card 3 awal */}
-      <div className=" border-gray-500 p-4 gap-x-4 rounded-lg border-2">
+      <div className=" border-gray-500 p-4 gap-x-4 rounded-lg border-2 shadow-xl">
         <div className="flex">
           <Image
             src="/foto-pekerjaan.png"

@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Dropdown from '@/components/molekul/DropDown';
 import CardBeranda from '@/components/cards/card-beranda';
 import Link from 'next/link';
+import Testimonial from '@/components/organism/Testimonial';
 
 const Beranda = () => {
   return (
@@ -218,7 +219,7 @@ const Beranda = () => {
               Bagaimana membantu anda?
             </h2>
             <div className="flex pt-12 px-5">
-              <div className="border-4 border-gray-400 rounded-lgo px-[18px] py-8 rounded-lg">
+              <div className="border-4 border-gray-400 rounded-lgo px-[18px] py-8 rounded-lg shadow-xl">
                 <Image
                   src="/softwarecodepana.png"
                   alt="ellipse"
@@ -244,7 +245,7 @@ const Beranda = () => {
                 height={211}
                 className="mx-auto px-1"
               />
-              <div className="border-4 border-gray-400 rounded-lgo px-[18px] py-8 rounded-lg">
+              <div className="border-4 border-gray-400 rounded-lgo px-[18px] py-8 rounded-lg shadow-xl">
                 <Image
                   src="/softwarecodepana.png"
                   alt="ellipse"
@@ -269,7 +270,7 @@ const Beranda = () => {
                 height={211}
                 className="mx-auto px-1"
               />
-              <div className="border-4 border-gray-400 rounded-lgo px-[18px] py-8 rounded-lg">
+              <div className="border-4 border-gray-400 rounded-lgo px-[18px] py-8 rounded-lg shadow-xl">
                 <Image
                   src="/softwarecodepana.png"
                   alt="ellipse"
@@ -292,82 +293,7 @@ const Beranda = () => {
         </div>
         {/* guidie akhir */}
         {/* testimoni awal */}
-        <div className="pt-28 pl-[102px] px-[105px]">
-          <h2 className="text-5xl font-lato font-medium text-center">
-            Apa Kata Mereka
-          </h2>
-          <div className="grid grid-cols-3  pt-12 px-5 gap-20">
-            <div className="border-4 border-gray-400 rounded-lgo px-[35px] py-8 rounded-lg">
-              <Image src="/start.svg" alt="ellipse" width={120} height={18} />
-              <p className=" text-lg pt-[30px] text-center font-medium">
-                &ldquo;Saya sangat bersyukur menemukan platform ini. Mereka
-                memiliki banyak lowongan pekerjaan sesuai kebutuhan saya dan
-                memberikan dukungan luar biasa dalam mencari pekerjaan.&ldquo;
-              </p>
-              <div className=" flex items-center pb-2 pt-8">
-                <Image
-                  src="/avatar_users.svg"
-                  alt="Logo Rafflesia"
-                  width={65}
-                  height={65}
-                  className="rounded-full pt-4 "
-                />
-                <div className="px-4 pt-3">
-                  <h2 className=" font-semibold">Alleta</h2>
-                  <p className=" font-semibold text-gray-600">
-                    House Keeping Ratu Laut
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="border-4 border-gray-400 rounded-lgo px-[35px] py-8 rounded-lg">
-              <Image src="/start.svg" alt="ellipse" width={120} height={18} />
-              <p className=" text-lg pt-[30px] text-center font-medium">
-                &ldquo;Saya sangat bersyukur menemukan platform ini. Mereka
-                memiliki banyak lowongan pekerjaan sesuai kebutuhan saya dan
-                memberikan dukungan luar biasa dalam mencari pekerjaan.&ldquo;
-              </p>
-              <div className=" flex items-center pb-2 pt-8">
-                <Image
-                  src="/avatar_users.svg"
-                  alt="Logo Rafflesia"
-                  width={65}
-                  height={65}
-                  className="rounded-full pt-4 "
-                />
-                <div className="px-4 pt-3">
-                  <h2 className=" font-semibold">Alleta</h2>
-                  <p className=" font-semibold text-gray-600">
-                    House Keeping Ratu Laut
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="border-4 border-gray-400 rounded-lgo px-[35px] py-8 rounded-lg">
-              <Image src="/start.svg" alt="ellipse" width={120} height={18} />
-              <p className=" text-lg pt-[30px] text-center font-medium">
-                &ldquo;Saya sangat bersyukur menemukan platform ini. Mereka
-                memiliki banyak lowongan pekerjaan sesuai kebutuhan saya dan
-                memberikan dukungan luar biasa dalam mencari pekerjaan.&ldquo;
-              </p>
-              <div className=" flex items-center pb-2 pt-8">
-                <Image
-                  src="/avatar_users.svg"
-                  alt="Logo Rafflesia"
-                  width={65}
-                  height={65}
-                  className="rounded-full pt-4 "
-                />
-                <div className="px-4 pt-3">
-                  <h2 className=" font-semibold">Alleta</h2>
-                  <p className=" font-semibold text-gray-600">
-                    House Keeping Ratu Laut
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Testimonial />
 
         {/* testimoni akhir */}
 

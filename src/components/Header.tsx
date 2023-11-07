@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 const Header = () => {
   return (
-    <div>
+    <div className='container fixed bg-white z-20'>
       <div className="flex pt-[9px] justify-between">
         <div className=" flex items-center pl-[102px]">
           <Image

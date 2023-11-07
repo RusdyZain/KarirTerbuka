@@ -1,0 +1,105 @@
+[{
+        "id": 1,
+        "nama": "Senior UI Design",
+        "perusahaan": "PT Figma",
+        "tags": [{
+            "name": ["UI Design", "UX Design", "HRD"]
+        }],
+        "tools": "Figma",
+        "created_at": "2 hari yang lalu",
+        "location": "Mataram",
+        "deskripsi": "Senior UI Designer adalah seorang profesional berpengalaman dalam merancang antarmuka pengguna (UI) yang menghadirkan pengalaman pengguna yang luar biasa dan memikat dengan desain visual yang estetis.",
+        "gaji": "10jt-15jt/bulan"
+    },
+    {
+        "id": 2,
+        "nama": "Frontend Developer",
+        "perusahaan": "PT WebDev",
+        "tags": [{
+            "name": ["Web Development", "JavaScript", "React"]
+        }],
+        "tools": "VS Code",
+        "created_at": "3 hari yang lalu",
+        "location": "Jakarta",
+        "deskripsi": "Frontend Developer adalah seorang profesional dalam pengembangan web yang berfokus pada tampilan dan interaksi pengguna.",
+        "gaji": "9jt-14jt/bulan"
+    },
+    {
+        "id": 3,
+        "nama": "Database Administrator",
+        "perusahaan": "PT DataTech",
+        "tags": [{
+            "name": ["Database Management", "SQL", "NoSQL"]
+        }],
+        "tools": "MySQL",
+        "created_at": "4 hari yang lalu",
+        "location": "Surabaya",
+        "deskripsi": "Database Administrator adalah orang yang bertanggung jawab atas manajemen dan pemeliharaan database perusahaan.",
+        "gaji": "8jt-13jt/bulan"
+    },
+    {
+        "id": 4,
+        "nama": "Full Stack Developer",
+        "perusahaan": "PT FullStackDev",
+        "tags": [{
+            "name": ["Web Development", "Frontend", "Backend"]
+        }],
+        "tools": "Visual Studio",
+        "created_at": "5 hari yang lalu",
+        "location": "Bandung",
+        "deskripsi": "Full Stack Developer adalah seorang pengembang yang memiliki keterampilan dalam pengembangan frontend dan backend.",
+        "gaji": "11jt-16jt/bulan"
+    },
+    {
+        "id": 5,
+        "nama": "Data Scientist",
+        "perusahaan": "PT DataScience",
+        "tags": [{
+            "name": ["Data Analysis", "Machine Learning", "Python"]
+        }],
+        "tools": "Jupyter Notebook",
+        "created_at": "6 hari yang lalu",
+        "location": "Yogyakarta",
+        "deskripsi": "Data Scientist adalah seorang ahli data yang menganalisis dan menginterpretasikan data untuk mengambil keputusan bisnis.",
+        "gaji": "12jt-18jt/bulan"
+    },
+    {
+        "id": 6,
+        "nama": "Mobile App Developer",
+        "perusahaan": "PT MobileTech",
+        "tags": [{
+            "name": ["Mobile App Development", "iOS", "Android"]
+        }],
+        "tools": "Xcode",
+        "created_at": "7 hari yang lalu",
+        "location": "Semarang",
+        "deskripsi": "Mobile App Developer adalah seorang pengembang aplikasi mobile yang membuat aplikasi untuk iOS dan Android.",
+        "gaji": "9jt-15jt/bulan"
+    },
+    {
+        "id": 7,
+        "nama": "Network Administrator",
+        "perusahaan": "PT NetworkTech",
+        "tags": [{
+            "name": ["Network Management", "Cisco", "Firewall"]
+        }],
+        "tools": "Wireshark",
+        "created_at": "8 hari yang lalu",
+        "location": "Medan",
+        "deskripsi": "Network Administrator bertanggung jawab atas manajemen jaringan dan keamanan komputer perusahaan.",
+        "gaji": "10jt-17jt/bulan"
+    },
+    {
+        "id": 8,
+        "nama": "Digital Marketing Specialist",
+        "perusahaan": "PT DigitalMark",
+        "tags": [{
+            "name": ["Digital Marketing", "Social Media", "SEO"]
+        }],
+        "tools": "Google Analytics",
+        "created_at": "9 hari yang lalu",
+        "location": "Balikpapan",
+        "deskripsi": "Digital Marketing Specialist adalah seorang ahli dalam strategi pemasaran digital dan promosi online.",
+        "gaji": "8jt-14jt/bulan"
+    }
+]
