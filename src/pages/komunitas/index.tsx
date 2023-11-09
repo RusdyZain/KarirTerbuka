@@ -6,6 +6,7 @@ import Section from '@/components/komunitas/Section'
 import CardKomunitas from '@/components/komunitas/CardKomunitas'
 import CardLink from '@/components/komunitas/CardLink'
 import Galery from '@/components/komunitas/Galery'
+import Footer from '@/components/Footer'
 
 export default function Komunitas() {
     return (
@@ -35,6 +36,7 @@ export default function Komunitas() {
                 <h1 className="col-span-3 text-black text-center text-5xl mb-10 font-bold">Galery</h1>
                 <Galery />
             </div>
+            <Footer />
         </div>
     )
 }

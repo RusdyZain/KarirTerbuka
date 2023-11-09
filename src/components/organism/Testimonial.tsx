@@ -8,8 +8,8 @@ const Testimonial = () => {
         Apa Kata Mereka
       </h2>
       <div className="grid grid-cols-3  pt-12 px-5 gap-16">
-        <div className="border-4 border-gray-400 rounded-lgo px-[35px] py-8 rounded-lg shadow-xl">
-        <Rating rating={5} />
+        <div className="border-4 border-gray-400 rounded-lgo px-[30px] py-8 rounded-lg shadow-xl">
+          <Rating rating={5} />
           <p className=" text-lg pt-[30px] text-center font-medium">
             &ldquo;Saya sangat bersyukur menemukan platform ini. Mereka memiliki
             banyak lowongan pekerjaan sesuai kebutuhan saya dan memberikan
@@ -31,7 +31,7 @@ const Testimonial = () => {
             </div>
           </div>
         </div>
-        <div className="border-4 border-gray-400 rounded-lgo px-[35px] py-8 rounded-lg shadow-xl">
+        <div className="border-4 border-gray-400 rounded-lgo px-[30px] py-8 rounded-lg shadow-xl">
           <Rating rating={3} />
           <p className=" text-lg pt-[30px] text-center font-medium">
             &ldquo;Saya sangat bersyukur menemukan platform ini. Mereka memiliki
@@ -54,8 +54,8 @@ const Testimonial = () => {
             </div>
           </div>
         </div>
-        <div className="border-4 border-gray-400 rounded-lgo px-[35px] py-8 rounded-lg shadow-xl">
-        <Rating rating={4} />
+        <div className="border-4 border-gray-400 rounded-lgo px-[30px] py-8 rounded-lg shadow-xl">
+          <Rating rating={4} />
           <p className=" text-lg pt-[30px] text-center font-medium">
             &ldquo;Saya sangat bersyukur menemukan platform ini. Mereka memiliki
             banyak lowongan pekerjaan sesuai kebutuhan saya dan memberikan

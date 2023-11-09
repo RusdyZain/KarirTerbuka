@@ -1,16 +1,15 @@
 import Image from 'next/image';
 const CardBeranda = () => {
   return (
-    <div className="grid grid-cols-3 gap-10 pt-14 pl-[102px]  pr-[106px] ">
-      {/* card 1 awal */}
-      <div className=" border-gray-500 p-4 gap-x-4 rounded-lg border-2 shadow-xl">
+    <div className="grid grid-cols-3 gap-10 pt-14 pl-[102px]  pr-[106px] mb-20">
+      <div className="p-4 gap-x-4 rounded-lg border-2 border-[#8695AA] shadow-xl">
         <div className="flex ">
           <Image
             src="/foto-pekerjaan.png"
             alt="Logo Rafflesia"
             width={85}
             height={48}
-            className="rounded-lg "
+            className="rounded-lg"
           />
           <div className="px-2">
             <h1 className="text-lato font-semibold text-2xl">
@@ -20,10 +19,10 @@ const CardBeranda = () => {
           </div>
         </div>
         <div className="flex gap-4 pt-6">
-          <button type="button" className=" bg-secondary-500 p-1 px-2 rounded-md">
+          <button type="button" className=" bg-[#E5DC0A] font-medium p-1 px-2 rounded-md">
             Administrasi
           </button>
-          <button type="button" className=" bg-secondary-500 p-1 px-2 rounded-md">
+          <button type="button" className=" bg-[#E5DC0A] font-medium p-1 px-2 rounded-md">
             Marketing
           </button>
         </div>
@@ -59,18 +58,18 @@ const CardBeranda = () => {
           />
           <p className="text-lg text-gray-700">Mataram</p>
         </div>
-        {/* deskripsi card awal*/}
-        <div className="pt-2.5 ">
-          <p className="p-2.5 text-lg font-semibold">
+
+        <div className="pt-2.5">
+          <p className="mb-2 text-lg font-semibold">
             Senior UI Designer adalah seorang profesional berpengalaman dalam
             merancang antarmuka pengguna (UI) yang menghadirkan pengalaman
             pengguna yang luar biasa dan memikat dengan desain visual yang
             estetis.
           </p>
         </div>
-        {/* deskripsi card akhir */}
+
         <hr className="pt-4 border-t-2 border-gray-300" />
-        <div className="flex justify-between px-2">
+        <div className="flex justify-between">
           <p className="text-lg font-semibold text-secondary-700">
             Rp 1jt-Rp3jt/bulan
           </p>
@@ -82,9 +81,7 @@ const CardBeranda = () => {
           </button>
         </div>
       </div>
-      {/* card 1 akhir */}
-      {/*  card 2 awal*/}
-      <div className=" border-gray-500 p-4 gap-x-4 rounded-lg border-2 shadow-xl">
+      <div className="p-4 gap-x-4 rounded-lg border-2 border-[#8695AA] shadow-xl">
         <div className="flex">
           <Image
             src="/foto-pekerjaan.png"
@@ -101,10 +98,10 @@ const CardBeranda = () => {
           </div>
         </div>
         <div className="flex gap-4 pt-6">
-          <button type="button" className=" bg-secondary-500 p-1 px-2 rounded-md">
+          <button type="button" className=" bg-[#E5DC0A] font-medium p-1 px-2 rounded-md">
             Administrasi
           </button>
-          <button type="button" className=" bg-secondary-500 p-1 px-2 rounded-md">
+          <button type="button" className=" bg-[#E5DC0A] font-medium p-1 px-2 rounded-md">
             Marketing
           </button>
         </div>
@@ -140,18 +137,17 @@ const CardBeranda = () => {
           />
           <p className="text-lg text-gray-700">Mataram</p>
         </div>
-        {/* deskripsi card awal*/}
-        <div className="pt-2.5 ">
-          <p className="p-2.5 text-lg font-semibold">
+        <div className="pt-2.5">
+          <p className="mb-2 text-lg font-semibold">
             Senior UI Designer adalah seorang profesional berpengalaman dalam
             merancang antarmuka pengguna (UI) yang menghadirkan pengalaman
             pengguna yang luar biasa dan memikat dengan desain visual yang
             estetis.
           </p>
         </div>
-        {/* deskripsi card akhir */}
+
         <hr className="pt-4 border-t-2 border-gray-300" />
-        <div className="flex justify-between px-2">
+        <div className="flex justify-between">
           <p className="text-lg font-semibold text-secondary-700">
             Rp 1jt-Rp3jt/bulan
           </p>
@@ -163,9 +159,8 @@ const CardBeranda = () => {
           </button>
         </div>
       </div>
-      {/* card 2 akhir */}
-      {/* card 3 awal */}
-      <div className=" border-gray-500 p-4 gap-x-4 rounded-lg border-2 shadow-xl">
+
+      <div className="p-4 gap-x-4 rounded-lg border-2 border-[#8695AA] shadow-xl">
         <div className="flex">
           <Image
             src="/foto-pekerjaan.png"
@@ -182,10 +177,10 @@ const CardBeranda = () => {
           </div>
         </div>
         <div className="flex gap-4 pt-6">
-          <button type="button" className=" bg-secondary-500 p-1 px-2 rounded-md">
+          <button type="button" className=" bg-[#E5DC0A] font-medium p-1 px-2 rounded-md">
             Administrasi
           </button>
-          <button type="button" className=" bg-secondary-500 p-1 px-2 rounded-md">
+          <button type="button" className=" bg-[#E5DC0A] font-medium p-1 px-2 rounded-md">
             Marketing
           </button>
         </div>
@@ -221,18 +216,18 @@ const CardBeranda = () => {
           />
           <p className="text-lg text-gray-700">Mataram</p>
         </div>
-        {/* deskripsi card awal*/}
-        <div className="pt-2.5 ">
-          <p className="p-2.5 text-lg font-semibold">
+
+        <div className="pt-2.5">
+          <p className="mb-2 text-lg font-semibold">
             Senior UI Designer adalah seorang profesional berpengalaman dalam
             merancang antarmuka pengguna (UI) yang menghadirkan pengalaman
             pengguna yang luar biasa dan memikat dengan desain visual yang
             estetis.
           </p>
         </div>
-        {/* deskripsi card akhir */}
+
         <hr className="pt-4 border-t-2 border-gray-300" />
-        <div className="flex justify-between px-2">
+        <div className="flex justify-between">
           <p className="text-lg font-semibold text-secondary-700">
             Rp 1jt-Rp3jt/bulan
           </p>
@@ -244,7 +239,6 @@ const CardBeranda = () => {
           </button>
         </div>
       </div>
-      {/* card 3 akhir */}
     </div>
   );
 };

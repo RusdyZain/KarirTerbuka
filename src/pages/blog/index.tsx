@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '@/components/Header'
 import Image from 'next/image'
 import Link from 'next/link'
+import Footer from '@/components/Footer'
 import { useState } from 'react'
 
 export default function Blog() {
@@ -314,6 +315,7 @@ export default function Blog() {
                 <div className="w-[20%]">
                 </div>
             </div>
+            <Footer />
         </div >
     )
 }

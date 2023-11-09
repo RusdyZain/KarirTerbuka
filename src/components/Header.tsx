@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Header = () => {
   return (
     <div className='container fixed bg-white z-20'>
-      <div className="flex pt-[9px] justify-between">
+      <div className="flex pt-[9px] justify-between mb-2">
         <div className=" flex items-center pl-[102px]">
           <Image
             src="/logo_rafflesia.svg"
@@ -41,7 +41,7 @@ const Header = () => {
             alt="Logo Rafflesia"
             width={40}
             height={40}
-            className="rounded-full pt-4 "
+            className="rounded-full pt-3"
           />
         </div>
       </div>
