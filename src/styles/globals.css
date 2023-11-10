@@ -6,3 +6,27 @@
 * {
   font-family: 'Lato', sans-serif;
 }
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+    color: transparent;
+  }
+  50% {
+    background-position: 100% 50%;
+    color: transparent;
+  }
+  100% {
+    background-position: 0% 50%;
+    color: transparent;
+  }
+}
+
+.gradient-shift {
+  background: linear-gradient(90deg, #3b82f6, #aeff7b);
+  background-size: 200% 200%;
+  animation: gradientShift 2s linear infinite; /* Sesuaikan durasi dengan jumlah tahap (50% + 50%) */
+  -webkit-background-clip: text;
+  color: transparent;
+  animation-timing-function: linear;
+}

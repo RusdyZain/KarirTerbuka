@@ -15,8 +15,8 @@ const config: Config = {
       },
       colors: {
         'secondary-500': '#E5DC0A',
-        'secondary-700': '#A08108'
-      }
+        'secondary-700': '#A08108',
+      },
     },
   },
   plugins: [],
