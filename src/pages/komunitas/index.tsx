@@ -11,10 +11,10 @@ import Footer from '@/components/Footer'
 export default function Komunitas() {
     return (
         <div data-theme="light" className="h-full">
-            <div>
+            <div className="container mx-auto">
                 <Header />
             </div>
-            <div className="pt-14">
+            <div className="pt-20">
                 <ImageKomunitas />
             </div>
             <div className="py-20">
