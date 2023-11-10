@@ -22,7 +22,7 @@ export default function Blog() {
 
     return (
         <div data-theme="light" className="h-full pb-10">
-            <div className="bg-white">
+            <div className="bg-white container mx-auto">
                 <Header />
             </div>
             <div className="flex h-full pt-24">

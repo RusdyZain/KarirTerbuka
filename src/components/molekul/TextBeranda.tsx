@@ -12,7 +12,7 @@ export default function TextBeranda() {
                     Memberikan kemudahan untuk masyarakat penyandang disabilitas
                     dalam mencari lowongan pekerjaan
                 </p>
-                <div className="pt-11 pb-[280px]">
+                <div className="pt-11 pb-[325px]">
                     <button
                         type="button"
                         className="bg-blue-600 text-white text-2xl font-semibold font-lato p-2 py-4 px-8 w-[267px] rounded-xl">
