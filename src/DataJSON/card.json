@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Senior UI Design",
+    "company": "PT Figma",
+    "categories": ["Administrasi", "Marketing"],
+    "logoSrc": "/foto-pekerjaan.png",
+    "toolsIconSrc": "/carbon_task-tools.svg",
+    "timeIconSrc": "/ri_time-line.svg",
+    "locationIconSrc": "/carbon_map.svg",
+    "description": "Senior UI Designer adalah seorang profesional berpengalaman dalam merancang antarmuka pengguna (UI) yang menghadirkan pengalaman pengguna yang luar biasa dan memikat dengan desain visual yang estetis.",
+    "salaryRange": "Rp 1jt-Rp3jt/bulan",
+    "waktuKerja": "Kerja Paruh Waktu"
+  },
+  {
+    "title": "Senior UI Design",
+    "company": "PT Figma",
+    "categories": ["Administrasi", "Marketing"],
+    "logoSrc": "/foto-pekerjaan.png",
+    "toolsIconSrc": "/carbon_task-tools.svg",
+    "timeIconSrc": "/ri_time-line.svg",
+    "locationIconSrc": "/carbon_map.svg",
+    "description": "Senior UI Designer adalah seorang profesional berpengalaman dalam merancang antarmuka pengguna (UI) yang menghadirkan pengalaman pengguna yang luar biasa dan memikat dengan desain visual yang estetis.",
+    "salaryRange": "Rp 1jt-Rp3jt/bulan",
+    "waktuKerja": "Kerja dari Rumah"
+  },
+  {
+    "title": "Senior UI Design",
+    "company": "PT Figma",
+    "categories": ["Administrasi", "Marketing"],
+    "logoSrc": "/foto-pekerjaan.png",
+    "toolsIconSrc": "/carbon_task-tools.svg",
+    "timeIconSrc": "/ri_time-line.svg",
+    "locationIconSrc": "/carbon_map.svg",
+    "description": "Senior UI Designer adalah seorang profesional berpengalaman dalam merancang antarmuka pengguna (UI) yang menghadirkan pengalaman pengguna yang luar biasa dan memikat dengan desain visual yang estetis.",
+    "salaryRange": "Rp 1jt-Rp3jt/bulan",
+    "waktuKerja": "Kerja Penuh Waktu"
+  }
+]
