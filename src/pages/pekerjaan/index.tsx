@@ -7,7 +7,6 @@ import Footer from '@/components/Footer';
 import JobCard from '@/components/cards/card-beranda';
 import cardJson from '@/DataJSON/card.json'
 
-
 type DropdownProps = {
     label: string;
     options: string[];
@@ -62,30 +61,27 @@ const Dropdown = ({ label, options, selectedValue, onValueChange, isOpen, onTogg
                 className={`overflow-y-auto max-h-48 dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-full ${isOpen ? 'block' : 'hidden'}`}
             >
                 {options.map((option) => (
-                    <li key={option} onClick={() => handleOptionClick(option)}><a>{(option)}</a></li>
+                    <li key={option} onClick={() => handleOptionClick(option)}><a>{trimOption(option)}</a></li>
                 ))}
             </ul>
         </div>
     );
 };
 
-
 export default function Pekerjaan() {
-    const kategoriOptions = ["Kerja Paruh Waktu", "Kerja dari Rumah", "Kerja Penuh Waktu"];
+    const kategoriOptions: string[] = [
+        "Semua", "Administrasi", "Marketing", "Barista", "Design", "Developer", "Freelancer",
+    ];
 
     const [selectKategori, setSelectKategori] = useState("Kategori");
     const [isKategoriDropdownOpen, setIsKategoriDropdownOpen] = useState(false);
-
     const [isSmScreen, setIsSmScreen] = useState(false);
-
     const [selectedFilter, setSelectedFilter] = useState('Semua');
-
     const [filteredJobs, setFilteredJobs] = useState(cardJson);
 
     const handleFilterClick = (filter: string) => {
         setSelectedFilter(filter);
 
-        // Filter pekerjaan berdasarkan kategori yang dipilih
         if (filter === 'Semua') {
             setFilteredJobs(cardJson);
         } else {
@@ -106,6 +102,10 @@ export default function Pekerjaan() {
         return () => {
             window.removeEventListener('resize', handleResize);
         };
+    }, []);
+
+    useEffect(() => {
+        setFilteredJobs(cardJson);
     }, []);
 
     const jobCards = filteredJobs.map((job, index) => <JobCard key={index} {...job} />);
@@ -131,36 +131,16 @@ export default function Pekerjaan() {
                         />
                     </div>
                     <div className={`flex-[80%] h-12 grid grid-cols-5 px-10 ${isSmScreen ? 'flex-col' : 'flex-row'}`}>
-                        <button
-                            className={`font-semibold rounded-lg ${selectedFilter === 'Semua' ? 'bg-[#2570EB] text-white' : 'bg-[#BFD7FE57]'} mx-5 text-center`}
-                            onClick={() => handleFilterClick('Semua')}
-                        >
-                            Semua
-                        </button>
-                        <button
-                            className={`font-semibold rounded-lg ${selectedFilter === 'Administrasi' ? 'bg-[#2570EB] text-white' : 'bg-[#BFD7FE57]'} mx-5 text-center`}
-                            onClick={() => handleFilterClick('Administrasi')}
-                        >
-                            Administrasi
-                        </button>
-                        <button
-                            className={`font-semibold rounded-lg ${selectedFilter === 'Marketing' ? 'bg-[#2570EB] text-white' : 'bg-[#BFD7FE57]'} mx-5 text-center`}
-                            onClick={() => handleFilterClick('Marketing')}
-                        >
-                            Marketing
-                        </button>
-                        <button
-                            className={`font-semibold rounded-lg ${selectedFilter === 'Barista' ? 'bg-[#2570EB] text-white' : 'bg-[#BFD7FE57]'} mx-5 text-center`}
-                            onClick={() => handleFilterClick('Barista')}
-                        >
-                            Barista
-                        </button>
-                        <button
-                            className={`font-semibold rounded-lg ${selectedFilter === 'Design' ? 'bg-[#2570EB] text-white' : 'bg-[#BFD7FE57]'} mx-5 text-center`}
-                            onClick={() => handleFilterClick('Design')}
-                        >
-                            Design
-                        </button>
+                        {kategoriOptions.slice(0, 5).map((filterOption, index) => (
+                            <button
+                                key={index}
+                                className={`font-semibold rounded-lg ${selectedFilter === filterOption ? 'bg-[#2570EB] text-white' : 'bg-[#BFD7FE57]'} mx-5 text-center`}
+                                onClick={() => handleFilterClick(filterOption)}
+                            >
+                                {filterOption}
+                            </button>
+                        ))}
+
                     </div>
                 </div>
                 <div className="grid grid-cols-3 gap-10 pt-14 mb-20">
@@ -169,5 +149,5 @@ export default function Pekerjaan() {
                 <Footer />
             </div>
         </div>
-    )
+    );
 }

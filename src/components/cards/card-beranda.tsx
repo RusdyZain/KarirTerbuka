@@ -1,4 +1,7 @@
 import Image from 'next/image';
+import Link from 'next/link';
+import carData from "@/DataJSON/card.json"
+
 
 type JobCardProps = {
   title: string;
@@ -10,7 +13,6 @@ type JobCardProps = {
   locationIconSrc: string;
   description: string;
   salaryRange: string;
-  waktuKerja: string;
 };
 
 const JobCard = ({
@@ -23,7 +25,6 @@ const JobCard = ({
   locationIconSrc,
   description,
   salaryRange,
-  waktuKerja,
 }: JobCardProps): JSX.Element => {
   return (
     <div className="p-4 gap-x-4 rounded-lg border-2 border-[#8695AA] shadow-xl">
@@ -61,12 +62,16 @@ const JobCard = ({
       <hr className="pt-4 border-t-2 border-gray-300" />
       <div className="flex justify-between">
         <p className="text-lg font-semibold text-secondary-700">{salaryRange}</p>
-        <button
-          type="button"
-          className="bg-blue-600 font-lato font-semibold text-white text-lg px-8 py-2 rounded-lg"
-        >
-          Lamar
-        </button>
+        {carData.map((item, index) => (
+          <Link
+            key={item.id}
+            href={"/pekerjaan/subjob/" + item.id}
+            className="bg-blue-600 font-lato font-semibold text-white text-lg px-8 py-2 rounded-lg"
+          >
+            Lamar
+          </Link>
+        ))
+        }
       </div>
     </div>
   );
