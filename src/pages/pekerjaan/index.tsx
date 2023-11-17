@@ -79,6 +79,19 @@ export default function Pekerjaan() {
     const [selectedFilter, setSelectedFilter] = useState('Semua');
     const [filteredJobs, setFilteredJobs] = useState(cardJson);
 
+    const handleKategoriSelect = (kategori: string) => {
+        setSelectKategori(kategori);
+        setIsKategoriDropdownOpen(false); // Tutup dropdown setelah memilih kategori
+
+        // Filter pekerjaan berdasarkan kategori yang dipilih
+        if (kategori === 'Semua') {
+            setFilteredJobs(cardJson);
+        } else {
+            const filtered = cardJson.filter(job => job.categories.includes(kategori));
+            setFilteredJobs(filtered);
+        }
+    };
+
     const handleFilterClick = (filter: string) => {
         setSelectedFilter(filter);
 
@@ -125,7 +138,7 @@ export default function Pekerjaan() {
                             label={selectKategori}
                             options={kategoriOptions}
                             selectedValue={selectKategori}
-                            onValueChange={setSelectKategori}
+                            onValueChange={handleKategoriSelect}
                             isOpen={isKategoriDropdownOpen}
                             onToggle={() => setIsKategoriDropdownOpen(!isKategoriDropdownOpen)}
                         />
