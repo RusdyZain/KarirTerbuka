@@ -1,31 +1,61 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import carData from "@/DataJSON/card.json"
 
 
 type JobCardProps = {
+  id: number;
   title: string;
   company: string;
   categories: string[];
   logoSrc: string;
   toolsIconSrc: string;
+  toolsName: string;
   timeIconSrc: string;
+  timePresent: string;
   locationIconSrc: string;
+  locationName: string;
   description: string;
   salaryRange: string;
 };
 
+const formatTanggal = (tanggal: string) => {
+  const tanggalObj = new Date(tanggal);
+  const opsiFormat: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+  return tanggalObj.toLocaleDateString('id-ID', opsiFormat);
+};
+
 const JobCard = ({
+  id,
   title,
   company,
   categories,
   logoSrc,
   toolsIconSrc,
+  toolsName,
   timeIconSrc,
+  timePresent,
   locationIconSrc,
+  locationName,
   description,
   salaryRange,
 }: JobCardProps): JSX.Element => {
+  const hitungRentangWaktu = (tanggal: string) => {
+    const tanggalObj = new Date(tanggal);
+    const sekarang = new Date();
+    const selisih = sekarang.getTime() - tanggalObj.getTime();
+    const jumlahHari = Math.floor(selisih / (1000 * 3600 * 24));
+
+    if (jumlahHari === 0) {
+      return 'Hari ini';
+    } else if (jumlahHari === 1) {
+      return 'Kemarin';
+    } else {
+      return `${jumlahHari} hari yang lalu`;
+    }
+  };
+
+  const rentangWaktu = hitungRentangWaktu(timePresent)
+
   return (
     <div className="p-4 gap-x-4 rounded-lg border-2 border-[#8695AA] shadow-xl">
       <div className="flex">
@@ -45,16 +75,16 @@ const JobCard = ({
       <div className="flex gap-11 pt-6 w-full">
         <div className="flex gap-2.5">
           <Image src={toolsIconSrc} alt="Tools Icon" width={24} height={24} className="rounded-lg" />
-          <p className="text-lg text-gray-700">Figma</p>
+          <p className="text-lg text-gray-700">{toolsName}</p>
         </div>
         <div className="flex gap-2.5">
           <Image src={timeIconSrc} alt="Time Icon" width={24} height={24} className="rounded-lg" />
-          <p className="text-lg text-gray-700">12 hari yang lalu</p>
+          <p className="text-lg text-gray-700">{rentangWaktu}</p>
         </div>
       </div>
       <div className="flex gap-2.5 pt-4">
         <Image src={locationIconSrc} alt="Location Icon" width={24} height={24} className="rounded-lg" />
-        <p className="text-lg text-gray-700">Mataram</p>
+        <p className="text-lg text-gray-700">{locationName}</p>
       </div>
       <div className="pt-2.5">
         <p className="mb-2 text-lg font-semibold">{description}</p>
@@ -62,16 +92,12 @@ const JobCard = ({
       <hr className="pt-4 border-t-2 border-gray-300" />
       <div className="flex justify-between">
         <p className="text-lg font-semibold text-secondary-700">{salaryRange}</p>
-        {carData.map((item, index) => (
-          <Link
-            key={item.id}
-            href={"/pekerjaan/subjob/" + item.id}
-            className="bg-blue-600 font-lato font-semibold text-white text-lg px-8 py-2 rounded-lg"
-          >
-            Lamar
-          </Link>
-        ))
-        }
+        <Link
+          href={`/pekerjaan/subjob/${id}`}
+          className="bg-blue-600 font-lato font-semibold text-white text-lg px-8 py-2 rounded-lg"
+        >
+          Lamar
+        </Link>
       </div>
     </div>
   );

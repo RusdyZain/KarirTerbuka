@@ -69,9 +69,11 @@ const Dropdown = ({ label, options, selectedValue, onValueChange, isOpen, onTogg
 };
 
 export default function Pekerjaan() {
-    const kategoriOptions: string[] = [
-        "Semua", "Administrasi", "Marketing", "Barista", "Design", "Developer", "Freelancer",
-    ];
+    const allCategories: string[] = cardJson.reduce((categories: string[], job) => {
+        return categories.concat(job.categories);
+    }, []);
+
+    const kategoriOptions: string[] = ["Semua", ...Array.from(new Set<string>(allCategories))];
 
     const [selectKategori, setSelectKategori] = useState("Kategori");
     const [isKategoriDropdownOpen, setIsKategoriDropdownOpen] = useState(false);
