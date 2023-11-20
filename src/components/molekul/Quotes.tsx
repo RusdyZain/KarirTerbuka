@@ -3,7 +3,7 @@ import React from 'react'
 export default function Quotes() {
     return (
         <div>
-            <div className="container bg-blue-800 max-w-full pb-0 h-[252.51px] text-3xl font-lato font-semibold text-center py-11  px-40">
+            <div className="container bg-blue-800 max-w-full pb-0 h-[260px] text-3xl font-lato font-semibold text-center py-11  px-40">
                 <p className="  text-white pt-2.5">
                     &ldquo;Ketika saya bertemu orang-orang sukses saya bertanya sekitar
                     100 pertanyaan untuk mengetahui atribut keberhasilan mereka. Hal ini

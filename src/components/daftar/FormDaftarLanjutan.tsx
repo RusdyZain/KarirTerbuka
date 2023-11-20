@@ -76,7 +76,6 @@ const Dropdown = ({ label, options, selectedValue, onValueChange }: DropdownProp
 export default function FormDaftar() {
     const genderOptions = ["Laki-Laki", "Perempuan"];
     const educationOptions = ["Tidak Sekolah", "Sekolah Dasar (SD)", "Sekolah Menengah Pertama (SMP)", "Sekolah Menengah Atas (SMA)", "Diploma (D1, D2, D3, D4)", "Sarjana (S1)", "Magister (S2)", "Doctor (S3)"];
-    const activityOptions = ["Olahraga", "Acara Sosial", "Liburan", "Bermain Game", "Komunitas"];
     const cityOptions = ["Mataram", "Lombok Barat", "Lombok Tengah", "Lombok Timur", "Lombok Utara", "Kabupaten Bima", "Kota Bima", "Dompu", "Sumbawa", "Sumbawa Barat"];
 
     const [selectedGender, setSelectedGender] = useState("L/P");

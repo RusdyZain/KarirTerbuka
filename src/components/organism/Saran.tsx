@@ -1,8 +1,12 @@
 import React from 'react'
 import Dropdown from '../molekul/DropDown'
 import CardBeranda from '../cards/card-beranda'
+import cardJson from '@/DataJSON/card.json'
+import JobCard from '@/components/cards/card-beranda'
 
 export default function Saran() {
+    const jobCards = cardJson.map((job, index) => <JobCard key={index} {...job} />);
+
     return (
         <div>
             <section>
@@ -22,7 +26,9 @@ export default function Saran() {
                     </div>
                 </div>
             </section>
-            <CardBeranda />
+            <div className="grid grid-cols-3 gap-10 pt-14 mb-20 pl-[102px]  pr-[106px]">
+                {jobCards}
+            </div>
         </div>
     )
 }

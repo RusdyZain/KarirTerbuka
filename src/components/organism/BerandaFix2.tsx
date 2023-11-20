@@ -4,7 +4,7 @@ import TextBeranda2 from '../molekul/TextBeranda2'
 
 export default function BerandaFix2() {
     return (
-        <div className="flex pt-[80px]">
+        <div className="flex pt-[120px]">
             <div className="w-2/4 relative">
                 <ImageBeranda2 />
             </div>
