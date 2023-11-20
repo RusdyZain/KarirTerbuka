@@ -18,12 +18,6 @@ type JobCardProps = {
   salaryRange: string;
 };
 
-const formatTanggal = (tanggal: string) => {
-  const tanggalObj = new Date(tanggal);
-  const opsiFormat: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
-  return tanggalObj.toLocaleDateString('id-ID', opsiFormat);
-};
-
 const JobCard = ({
   id,
   title,

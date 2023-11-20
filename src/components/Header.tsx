@@ -100,7 +100,7 @@ const Header = () => {
             alt="Logo Rafflesia"
             width={40}
             height={40}
-            className="rounded-full pt-3 "
+            className="rounded-full mt-3 ring ring-blue-600 ring-offset-base-100 ring-offset-2"
           />
         </Link>
       </div>

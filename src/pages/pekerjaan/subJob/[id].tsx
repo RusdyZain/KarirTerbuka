@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import carData from "@/DataJSON/card.json"
+import cardData from "@/DataJSON/card.json"
 import Header from "@/components/Header";
-import cardJson from '@/DataJSON/card.json'
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/Footer";
@@ -29,29 +28,20 @@ type JobType = {
 };
 
 export default function SubJob() {
-    const [filteredJobs, setFilteredJobs] = useState(cardJson);
+    const [filteredJobs, setFilteredJobs] = useState(cardData);
     const [data, setData] = useState<JobType | undefined>();
     const router = useRouter();
 
     useEffect(() => {
         if (router.isReady) {
             const id = router.query.id as string;
-            const result = carData.find((value) => value.id === parseInt(id));
+            const result = cardData.find((value) => value.id === parseInt(id));
             setData(result);
         }
         else {
             console.error("Invalid ID");
         }
     }, [router]);
-
-    const handleKategoriSelect = (kategori: string) => {
-        if (data?.categories && data.categories.includes(kategori)) {
-            setFilteredJobs(cardJson);
-        } else {
-            const filtered = cardJson.filter(job => job.categories.includes(kategori));
-            setFilteredJobs(filtered);
-        }
-    };
 
     const jobCards = filteredJobs
         .filter((job, index) => index < 3 && data?.categories?.some(category => job.categories.includes(category)))

@@ -160,8 +160,8 @@ export default function Pekerjaan() {
                         {jobCards}
                     </div>
                 </div>
-                <Footer />
             </div>
+            <Footer />
         </div>
     );
 }
