@@ -87,13 +87,15 @@ const JobCard = ({
         <p className="text-lg text-gray-700">{locationName}</p>
       </div>
       <div className="pt-2.5">
-        <p className="mb-2 text-lg font-semibold">{description}</p>
+        <p className="mb-2 text-lg font-semibold">
+          {description.length > 150 ? `${description.slice(0, 165)}...` : description}
+        </p>
       </div>
       <hr className="pt-4 border-t-2 border-gray-300" />
       <div className="flex justify-between">
         <p className="text-lg font-semibold text-secondary-700">{salaryRange}</p>
         <Link
-          href={`/pekerjaan/subjob/${id}`}
+          href={`/pekerjaan/subJob/${id}`}
           className="bg-blue-600 font-lato font-semibold text-white text-lg px-8 py-2 rounded-lg"
         >
           Lamar

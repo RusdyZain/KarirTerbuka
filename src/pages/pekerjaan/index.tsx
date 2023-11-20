@@ -83,9 +83,8 @@ export default function Pekerjaan() {
 
     const handleKategoriSelect = (kategori: string) => {
         setSelectKategori(kategori);
-        setIsKategoriDropdownOpen(false); // Tutup dropdown setelah memilih kategori
+        setIsKategoriDropdownOpen(false);
 
-        // Filter pekerjaan berdasarkan kategori yang dipilih
         if (kategori === 'Semua') {
             setFilteredJobs(cardJson);
         } else {

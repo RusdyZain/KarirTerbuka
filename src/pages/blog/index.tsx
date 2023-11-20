@@ -91,8 +91,6 @@ export default function Blog() {
                                         </div>
                                     )}
                                 </button>
-
-
                             </div>
                         </div>
                     </div>

@@ -27,9 +27,7 @@ export default function Saran() {
                 </div>
             </section>
             <div className="grid grid-cols-3 gap-10 pt-14 mb-20 pl-[102px]  pr-[106px]">
-                <div className="gap-10 pt-14 mb-20">
-                    {jobCards}
-                </div>
+                {jobCards}
             </div>
         </div>
     )
