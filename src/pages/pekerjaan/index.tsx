@@ -125,40 +125,40 @@ export default function Pekerjaan() {
     const jobCards = filteredJobs.map((job, index) => <JobCard key={index} {...job} />);
 
     return (
-        <div data-theme="light" className="w-screen h-full">
-            <div className="container mx-auto">
+        <div data-theme="light">
+            <div className="h-full container mx-auto">
                 <Header />
-            </div>
-            <div className="mx-24">
-                <div className="pt-[100px] text-center mb-10">
-                    <Heros />
-                </div>
-                <div className="flex">
-                    <div className="flex-[20%] h-12">
-                        <Dropdown
-                            label={selectKategori}
-                            options={kategoriOptions}
-                            selectedValue={selectKategori}
-                            onValueChange={handleKategoriSelect}
-                            isOpen={isKategoriDropdownOpen}
-                            onToggle={() => setIsKategoriDropdownOpen(!isKategoriDropdownOpen)}
-                        />
+                <div className="mx-24">
+                    <div className="pt-[100px] text-center mb-10">
+                        <Heros />
                     </div>
-                    <div className={`flex-[80%] h-12 grid grid-cols-5 px-10 ${isSmScreen ? 'flex-col' : 'flex-row'}`}>
-                        {kategoriOptions.slice(0, 5).map((filterOption, index) => (
-                            <button
-                                key={index}
-                                className={`font-semibold rounded-lg ${selectedFilter === filterOption ? 'bg-[#2570EB] text-white' : 'bg-[#BFD7FE57]'} mx-5 text-center`}
-                                onClick={() => handleFilterClick(filterOption)}
-                            >
-                                {filterOption}
-                            </button>
-                        ))}
+                    <div className="flex">
+                        <div className="flex-[20%] h-12">
+                            <Dropdown
+                                label={selectKategori}
+                                options={kategoriOptions}
+                                selectedValue={selectKategori}
+                                onValueChange={handleKategoriSelect}
+                                isOpen={isKategoriDropdownOpen}
+                                onToggle={() => setIsKategoriDropdownOpen(!isKategoriDropdownOpen)}
+                            />
+                        </div>
+                        <div className={`flex-[80%] h-12 grid grid-cols-5 px-10 ${isSmScreen ? 'flex-col' : 'flex-row'}`}>
+                            {kategoriOptions.slice(0, 5).map((filterOption, index) => (
+                                <button
+                                    key={index}
+                                    className={`font-semibold rounded-lg ${selectedFilter === filterOption ? 'bg-[#2570EB] text-white' : 'bg-[#BFD7FE57]'} mx-5 text-center`}
+                                    onClick={() => handleFilterClick(filterOption)}
+                                >
+                                    {filterOption}
+                                </button>
+                            ))}
 
+                        </div>
                     </div>
-                </div>
-                <div className="grid grid-cols-3 gap-10 pt-14 mb-20">
-                    {jobCards}
+                    <div className="grid grid-cols-3 gap-10 pt-14 mb-20">
+                        {jobCards}
+                    </div>
                 </div>
                 <Footer />
             </div>
