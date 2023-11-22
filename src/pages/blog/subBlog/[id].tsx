@@ -1,4 +1,3 @@
-import React from 'react'
 import Header from '@/components/Header'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -81,7 +80,7 @@ const BlogTypeProbs = ({
                             <div className="avatar mb-10 w-[13%]">
                                 <div className="w-20 rounded-full ring ring-blue-600 ring-offset-base-100 ring-offset-2 ">
                                     {data?.profilUploader && typeof data.profilUploader === 'string' && (
-                                        <Image src={data.profilUploader} alt="Profil" width={500} height={250} />
+                                        <Image src={data?.profilUploader} alt="Profil" width={500} height={250} />
                                     )}
                                 </div>
 
@@ -176,7 +175,11 @@ const BlogTypeProbs = ({
                             </h2>
                         </div>
                     </div>
-                    <CardBlog />
+                    <div className="grid grid-cols-3 gap-10 pt-14 mb-20">
+                        {blogData.slice(0, 3).map((blog) => (
+                            <CardBlog key={blog.id} data={blog} />
+                        ))}
+                    </div>
                 </div>
                 <Footer />
             </div>

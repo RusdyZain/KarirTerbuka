@@ -13,7 +13,6 @@ export default function Komunitas() {
         <div data-theme="light" className="h-full">
             <div className="container mx-auto">
                 <Header />
-
                 <div className="pt-20">
                     <ImageKomunitas />
                 </div>
@@ -36,8 +35,8 @@ export default function Komunitas() {
                     <h1 className="col-span-3 text-black text-center text-5xl mb-10 font-bold">Galery</h1>
                     <Galery />
                 </div>
-                <Footer />
             </div>
+            <Footer />
         </div>
     )
 }
