@@ -2,12 +2,20 @@ import React from 'react'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Image from 'next/image'
+import DataKomunitas from '@/DataJSON/komunitas.json'
+
+const truncateText = (text: string, maxLength: number) => {
+    if (text.length > maxLength) {
+        return text.substring(0, maxLength) + '...';
+    }
+    return text;
+}
 
 export default function berandaKomunitas() {
     return (
         <div data-theme="light">
+            <Header />
             <div className="h-full container mx-auto">
-                <Header />
                 <div className="pt-20"></div>
                 <div className="grid grid-cols-2 bg-[#1E478A] mx-10 rounded-t-lg">
                     <div className="px-20 py-16">
@@ -55,14 +63,18 @@ export default function berandaKomunitas() {
                         <Image src="/ImgKomunitasDpn.png" alt="" width={1000} height={100} />
                     </div>
                 </div>
-                <div className="pt-10 rounded-b-lg bg-[#EFF5FF] mx-10 flex">
+                <div className="pt-20 rounded-b-lg bg-[#EFF5FF] mx-10 flex">
                     <div className="flex-[40%] grid justify-items-center">
-                        <div className="mb-10 w-96 h-28 shadow-[0_5px_5px_2px_rgba(0,0,0,0.1)] rounded-lg">
-
-                        </div>
-                        <div className="mb-10 w-96 h-28 shadow-[0_5px_5px_2px_rgba(0,0,0,0.1)] rounded-lg">
-
-                        </div>
+                        {DataKomunitas.map((community, index) => (
+                            <div key={index} className="mb-10 w-96 h-28 shadow-[0_5px_5px_2px_rgba(0,0,0,0.1)] rounded-lg flex">
+                                <div className="flex-[70%]">
+                                    <figure className="relative sm:pt-[60%] rounded-lg overflow-hidden ml-5" style={{ width: '30%', height: '100px', alignSelf: 'center' }}>
+                                        <Image src={community.image} alt="" width={350} height={100} className="rounded-lg mt-4 w-full h-full absolute top-0 left-0 object-cover" />
+                                    </figure>
+                                </div>
+                                <div className="flex-[30%]"></div>
+                            </div>
+                        ))}
                     </div>
                     <div className="flex-[60%]"></div>
                 </div>

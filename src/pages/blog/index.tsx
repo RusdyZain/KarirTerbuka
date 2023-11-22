@@ -8,8 +8,8 @@ import blogData from '@/DataJSON/blog.json';
 export default function Blog() {
     return (
         <div data-theme="light" className="h-full">
+            <Header />
             <div className="bg-white container mx-auto">
-                <Header />
                 <div className="pt-[100px] ml-28 mr-20">
                     <h1 className="text-4xl font-semibold mt-2 mb-5 text-center">Baca blog terbaru Kami</h1>
                     <p className="text-xl font-medium mb-10 text-center">Kami berkomitmen untuk memberikan informasi bermanfaat, pandangan mendalam, dan saran praktis untuk membantu Anda mengetahu cara mencari pekerjaan, serta tetap terinformasi tentang perkembangan terbaru tentang beberapa pekerjaan.</p>
@@ -68,8 +68,8 @@ export default function Blog() {
                         ))}
                     </div>
                 </div>
-                <Footer />
             </div>
+            <Footer />
         </div >
     )
 }

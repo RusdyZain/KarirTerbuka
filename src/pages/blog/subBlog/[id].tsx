@@ -57,8 +57,8 @@ const BlogTypeProbs = ({
 
     return (
         <div data-theme="light" className="h-full">
+            <Header />
             <div className="bg-white container mx-auto">
-                <Header />
                 <div className="flex h-full pt-24">
                     <div className="w-[20%]">
                         <div className="sticky top-24 ml-10">

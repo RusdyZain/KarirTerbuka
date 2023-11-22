@@ -126,8 +126,8 @@ export default function Pekerjaan() {
 
     return (
         <div data-theme="light">
+            <Header />
             <div className="h-full container mx-auto">
-                <Header />
                 <div className="mx-24">
                     <div className="pt-[100px] text-center mb-10">
                         <Heros />

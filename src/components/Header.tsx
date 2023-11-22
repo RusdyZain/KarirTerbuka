@@ -45,7 +45,7 @@ const Header = () => {
   ];
 
   return (
-    <div className="container fixed bg-white z-20">
+    <div className="w-screen fixed bg-white z-20">
       <div className="flex pt-[9px] lg:justify-between mb-2">
         <div className={`flex items-center pl-[102px] sm:pl-10 ${isMenuOpen ? 'mt-[-200px]' : ''}`} >
           <Image

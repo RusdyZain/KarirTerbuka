@@ -49,8 +49,8 @@ export default function SubJob() {
 
     return (
         <div data-theme="light">
+            <Header />
             <div className="h-full container mx-auto">
-                <Header />
                 <div className="pt-[100px] flex ml-28 mr-20">
                     <div className="w-[60%] image-container relative mr-5" >
                         {data?.img1 && typeof data.img1 === 'string' && (
