@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import carData from "@/DataJSON/card.json"
+import cardData from "@/DataJSON/card.json"
 import Header from "@/components/Header";
-import cardJson from '@/DataJSON/card.json'
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/Footer";
@@ -29,14 +28,14 @@ type JobType = {
 };
 
 export default function SubJob() {
-    const [filteredJobs, setFilteredJobs] = useState(cardJson);
+    const [filteredJobs, setFilteredJobs] = useState(cardData);
     const [data, setData] = useState<JobType | undefined>();
     const router = useRouter();
 
     useEffect(() => {
         if (router.isReady) {
             const id = router.query.id as string;
-            const result = carData.find((value) => value.id === parseInt(id));
+            const result = cardData.find((value) => value.id === parseInt(id));
             setData(result);
         }
         else {
@@ -44,23 +43,14 @@ export default function SubJob() {
         }
     }, [router]);
 
-    const handleKategoriSelect = (kategori: string) => {
-        if (data?.categories && data.categories.includes(kategori)) {
-            setFilteredJobs(cardJson);
-        } else {
-            const filtered = cardJson.filter(job => job.categories.includes(kategori));
-            setFilteredJobs(filtered);
-        }
-    };
-
     const jobCards = filteredJobs
         .filter((job, index) => index < 3 && data?.categories?.some(category => job.categories.includes(category)))
         .map((job, index) => <JobCard key={index} {...job} />);
 
     return (
         <div data-theme="light">
+            <Header />
             <div className="h-full container mx-auto">
-                <Header />
                 <div className="pt-[100px] flex ml-28 mr-20">
                     <div className="w-[60%] image-container relative mr-5" >
                         {data?.img1 && typeof data.img1 === 'string' && (
@@ -104,7 +94,7 @@ export default function SubJob() {
                         {data?.email && typeof data.email === 'string' && (
                             <Link
                                 href={data?.email}
-                                className=" bg-blue-600 font-lato font-semibold text-white text-lg px-10 py-3 rounded-lg">
+                                className=" bg-blue-600 hover:bg-blue-800 font-lato font-semibold text-white text-lg px-10 py-3 rounded-lg">
                                 Ambil Lamaran Kerja
                             </Link>
                         )}
@@ -115,8 +105,8 @@ export default function SubJob() {
                         {jobCards}
                     </div>
                 </div>
-                <Footer />
             </div>
+            <Footer />
         </div>
     )
 }

@@ -10,7 +10,7 @@ export default function Quotes() {
                     biasanya sama:{' '}
                     <span className=" font-semibold text-[#E5DC0A]">kegigihan</span>
                     <span className=" font-semibold text-[#E5DC0A]">
-                        kerja keras
+                        {' '}kerja keras
                     </span>{' '}
                     dan
                     <span className=" font-semibold text-[#E5DC0A]">

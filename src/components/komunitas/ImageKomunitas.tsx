@@ -14,7 +14,7 @@ export default function ImageKomunitas() {
                 <div className="ml-20 relative z-10  text-center pt-[200px]">
                     <h1 className="my-2 text-white text-2xl">Temukan Komunitas Favoritmu</h1>
                     <button type="button" className="bg-white py-3 px-8 sm:py-1 justify-center items-center gap-2 sm:gap-0 rounded-md border-2 border-white font-bold text-[#2570EB] hover:text-white hover:bg-blue-500 hover:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-3xl sm:text-xs">
-                        <Link href="">Cari Komunitas</Link>
+                        <Link href="/komunitas/berandaKomunitas">Cari Komunitas</Link>
                     </button>
                 </div>
             </div>

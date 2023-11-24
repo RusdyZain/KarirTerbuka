@@ -11,8 +11,8 @@ import Guide from '@/components/molekul/Guide';
 const Beranda = () => {
   return (
     <div data-theme="light" className="absolute -z-0 w-screen">
-      <div className="font-lato container mx-auto">
-        <Header />
+      <Header />
+      <div className="font-lato">
         <BerandaFix />
         <Quotes />
         <Saran />
@@ -20,12 +20,14 @@ const Beranda = () => {
         <div className="pt-60">
           <Sponsor />
         </div>
-        <div className=" pt-80 pl-[102px]  pr-[106px]">
+        <div className="container mx-auto pt-80 pl-[102px]  pr-[106px]">
           <Guide />
         </div>
-        <Testimonial />
-        <Footer />
+        <div className="container mx-auto">
+          <Testimonial />
+        </div>
       </div>
+      <Footer />
     </div>
   );
 };

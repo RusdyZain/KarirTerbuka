@@ -126,8 +126,8 @@ export default function Pekerjaan() {
 
     return (
         <div data-theme="light">
+            <Header />
             <div className="h-full container mx-auto">
-                <Header />
                 <div className="mx-24">
                     <div className="pt-[100px] text-center mb-10">
                         <Heros />
@@ -147,7 +147,7 @@ export default function Pekerjaan() {
                             {kategoriOptions.slice(0, 5).map((filterOption, index) => (
                                 <button
                                     key={index}
-                                    className={`font-semibold rounded-lg ${selectedFilter === filterOption ? 'bg-[#2570EB] text-white' : 'bg-[#BFD7FE57]'} mx-5 text-center`}
+                                    className={`font-semibold rounded-lg ${selectedFilter === filterOption ? 'bg-[#2570EB] text-white' : 'bg-[#BFD7FE57] hover:bg-[#2570EB] hover:text-white'} mx-5 text-center`}
                                     onClick={() => handleFilterClick(filterOption)}
                                 >
                                     {filterOption}
@@ -160,8 +160,8 @@ export default function Pekerjaan() {
                         {jobCards}
                     </div>
                 </div>
-                <Footer />
             </div>
+            <Footer />
         </div>
     );
 }
