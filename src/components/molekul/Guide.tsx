@@ -9,7 +9,7 @@ export default function Guide() {
                     Bagaimana membantu anda?
                 </h2>
                 <div className="flex pt-12 px-5">
-                    <div className="border-4 border-[#8695AA] rounded-lgo px-[18px] py-8 rounded-lg shadow-xl w-[140rem]">
+                    <div className="border-4 border-[#8695AA] rounded-lgo px-[18px] py-8 rounded-lg shadow-xl w-[140rem] transition-transform transform-gpu hover:scale-105 hover:shadow-2xl">
                         <Image
                             src="/softwarecodepana.png"
                             alt="ellipse"
@@ -35,7 +35,7 @@ export default function Guide() {
                         height={211}
                         className="mx-auto px-1"
                     />
-                    <div className="border-4 border-[#8695AA] rounded-lgo px-[18px] py-8 rounded-lg shadow-xl w-[140rem]">
+                    <div className="border-4 border-[#8695AA] rounded-lgo px-[18px] py-8 rounded-lg shadow-xl w-[140rem] transition-transform transform-gpu hover:scale-105 hover:shadow-2xl">
                         <Image
                             src="/softwarecodepana2.png"
                             alt="ellipse"
@@ -57,7 +57,7 @@ export default function Guide() {
                         height={211}
                         className="mx-auto px-1"
                     />
-                    <div className="border-4 border-[#8695AA] rounded-lgo px-[18px] py-8 rounded-lg shadow-xl w-[140rem]">
+                    <div className="border-4 border-[#8695AA] rounded-lgo px-[18px] py-8 rounded-lg shadow-xl w-[140rem] transition-transform transform-gpu hover:scale-105 hover:shadow-2xl">
                         <Image
                             src="/softwarecodepana3.png"
                             alt="ellipse"

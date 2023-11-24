@@ -11,7 +11,7 @@ export default function Blog() {
             <Header />
             <div className="bg-white container mx-auto">
                 <div className="pt-[100px] ml-28 mr-20">
-                    <h1 className="text-4xl font-semibold mt-2 mb-5 text-center">Baca blog terbaru Kami</h1>
+                    <h1 className="text-4xl font-semibold mt-2 mb-5 text-center">Baca Blog Terbaru Kami</h1>
                     <p className="text-xl font-medium mb-10 text-center">Kami berkomitmen untuk memberikan informasi bermanfaat, pandangan mendalam, dan saran praktis untuk membantu Anda mengetahu cara mencari pekerjaan, serta tetap terinformasi tentang perkembangan terbaru tentang beberapa pekerjaan.</p>
                     <div className="flex">
                         <div className="w-[60%] image-container relative mr-5" >
