@@ -21,9 +21,6 @@ export default function Saran() {
                             pekerjaan ini. Kami berharap Anda dapat bergabung dengan kami.
                         </p>
                     </div>
-                    <div className="ml-auto pt-[59px]">
-                        <Dropdown />
-                    </div>
                 </div>
             </section>
             <div className="grid grid-cols-3 gap-10 pt-14 mb-20 pl-[102px]  pr-[106px]">

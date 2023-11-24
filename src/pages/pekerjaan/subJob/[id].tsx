@@ -94,7 +94,7 @@ export default function SubJob() {
                         {data?.email && typeof data.email === 'string' && (
                             <Link
                                 href={data?.email}
-                                className=" bg-blue-600 font-lato font-semibold text-white text-lg px-10 py-3 rounded-lg">
+                                className=" bg-blue-600 hover:bg-blue-800 font-lato font-semibold text-white text-lg px-10 py-3 rounded-lg">
                                 Ambil Lamaran Kerja
                             </Link>
                         )}
@@ -105,8 +105,8 @@ export default function SubJob() {
                         {jobCards}
                     </div>
                 </div>
-                <Footer />
             </div>
+            <Footer />
         </div>
     )
 }

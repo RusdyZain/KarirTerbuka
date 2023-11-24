@@ -2,7 +2,6 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-
 type BlogType = {
     id: number;
     title: string;

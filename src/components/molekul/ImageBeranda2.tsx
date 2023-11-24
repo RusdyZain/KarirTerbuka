@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function ImageBeranda2() {
     return (
         <div>
-            <div className=" pt-[133px] ">
+            <div className=" pt-[200px] ">
                 <Image
                     src="/Ellipse-full.svg"
                     alt="ellipse"

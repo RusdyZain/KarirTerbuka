@@ -27,7 +27,7 @@ export default function CardLink() {
                         </div>
                         <div className="card-actions justify-end mt-5">
                             <button type="button" className="bg-[#2570EB] py-3 px-5 sm:py-1 inline-flex justify-center items-center gap-2 sm:gap-0 rounded-md border-2 border-blue-600 font-bold text-white hover:text-white hover:bg-blue-500 hover:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-lg sm:text-xs">
-                                <Link href="">Cari Komunitas</Link>
+                                <Link href="/komunitas/berandaKomunitas">Cari Komunitas</Link>
                             </button>
                         </div>
                     </div>

@@ -181,8 +181,8 @@ const BlogTypeProbs = ({
                         ))}
                     </div>
                 </div>
-                <Footer />
             </div>
+            <Footer />
         </div >
     )
 }

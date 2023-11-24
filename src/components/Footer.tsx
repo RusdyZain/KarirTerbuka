@@ -10,9 +10,9 @@ export default function Footer() {
                     <div className="flex text-white justify-center gap-8 text-2xl">
                         <Link href="/">Tentang Kami </Link>
                         <Link href="/">Kontak </Link>
-                        <Link href="/">Pekerjaan </Link>
-                        <Link href="/">Komunitas </Link>
-                        <Link href="/">Blog</Link>
+                        <Link href="/pekerjaan">Pekerjaan </Link>
+                        <Link href="/komunitas">Komunitas </Link>
+                        <Link href="/blog">Blog</Link>
                     </div>
                     <div className="flex justify-center pt-12 gap-12 ">
                         <div className=" flex  justify-center items-center rounded-full border border-white h-[80px] w-[80px]">
