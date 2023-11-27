@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Image from 'next/image';
@@ -18,9 +18,32 @@ type TypeKomunitas = {
 
 type TypeBerandaKomunitasProps = {
     data: TypeKomunitas;
+    onClick?: () => void;
 };
 
 const BerandaKomunitas = ({ data }: TypeBerandaKomunitasProps): JSX.Element => {
+    const [selectedCommunity, setSelectedCommunity] = useState<TypeKomunitas | null>(null);
+
+    const handleCommunityClick = (komunitas: TypeKomunitas) => {
+        setSelectedCommunity(komunitas);
+    };
+
+    const hitungRentangWaktu = (tanggal: string) => {
+        const tanggalObj = new Date(tanggal);
+        const sekarang = new Date();
+        const selisih = sekarang.getTime() - tanggalObj.getTime();
+        const jumlahHari = Math.floor(selisih / (1000 * 3600 * 24));
+        if (jumlahHari === 0) {
+            return 'Hari ini';
+        } else if (jumlahHari === 1) {
+            return 'Kemarin';
+        } else {
+            return `${jumlahHari} hari yang lalu`;
+        }
+    };
+
+    const rentangWaktu = selectedCommunity?.date ? hitungRentangWaktu(selectedCommunity.date) : 'Tanggal tidak valid';
+
     return (
         <div data-theme="light">
             <Header />
@@ -72,29 +95,37 @@ const BerandaKomunitas = ({ data }: TypeBerandaKomunitasProps): JSX.Element => {
                         <Image src="/ImgKomunitasDpn.png" alt="" width={1000} height={100} />
                     </div>
                 </div>
-                <div className="flex pt-20 rounded-b-lg bg-[#EFF5FF] mx-10">
+                <div
+                    className="flex pt-20 rounded-b-lg bg-[#EFF5FF] mx-10">
                     <div className="flex-[40%] grid justify-items-center" style={{ alignSelf: 'flex-start' }}>
                         {DataKomunitas.map((Komunitas) => (
-                            <CardSubKomunitas key={Komunitas.id} data={Komunitas} />
+                            <CardSubKomunitas
+                                key={Komunitas.id}
+                                data={Komunitas}
+                                isSelected={selectedCommunity?.id === Komunitas.id}
+                                setSelectedCommunity={setSelectedCommunity}
+                            />
                         ))}
                     </div>
                     <div className="flex-[60%] grid justify-items-center">
                         <div className="w-[90%] h-[800px] flex flex-col">
                             <div className="bg-[#BFD7FE] h-[150px] rounded-t-lg">
                                 <div className="absolute mt-20 mx-10">
-                                    <Image
-                                        src="/avatar_users.svg"
-                                        alt="Logo Rafflesia"
-                                        width={90}
-                                        height={90}
-                                        className="rounded-full mt-3 ring ring-white ring-offset-base-100 ring-offset-2"
-                                    />
+                                    {selectedCommunity?.image && typeof selectedCommunity?.image === 'string' && (
+                                        <Image
+                                            src={selectedCommunity?.image}
+                                            alt="Logo Rafflesia"
+                                            width={150}
+                                            height={50}
+                                            className="rounded-full mt-3 ring ring-white ring-offset-base-100 ring-offset-2"
+                                        />
+                                    )}
                                 </div>
                             </div>
-                            <div className="bg-white h-[500px] rounded-b-lg px-10 ml-2 grid grid-cols-2">
+                            <div className="bg-white rounded-b-lg px-10 ml-2 grid grid-cols-2">
                                 <div>
-                                    <h1 className="text-xl font-bold mt-12">Komu.ID</h1>
-                                    <h4 className="">Mataram · 5 Bulan Yang Lalu</h4>
+                                    <h1 className="text-xl font-bold mt-12">{selectedCommunity?.name}</h1>
+                                    <h4 className="">Mataram · {rentangWaktu}</h4>
                                 </div>
                                 <div className="text-center mt-5">
                                     <div className="z-20 absolute ml-12">
@@ -129,14 +160,20 @@ const BerandaKomunitas = ({ data }: TypeBerandaKomunitasProps): JSX.Element => {
                                             </g>
                                         </svg>
                                     </div>
-                                    <Link
-                                        href="https://t.me/temidistek9"
-                                        className=" bg-blue-600 font-lato font-semibold text-white text-xs px-10 py-3 rounded-lg z-10 pl-14">
-                                        Bergabung Memalui Telegram
-                                    </Link>
+                                    {selectedCommunity?.link && typeof selectedCommunity.link === 'string' && (
+                                        <Link
+                                            href={selectedCommunity?.link}
+                                            className=" bg-blue-600 font-lato font-semibold text-white text-xs px-10 py-3 rounded-lg z-10 pl-14">
+                                            Bergabung Memalui Telegram
+                                        </Link>
+                                    )}
                                 </div>
                                 <div className="col-span-2">
                                     <hr className="h-px my-6 bg-[#2570EB] border-0"></hr>
+                                    <div className="pb-10">
+                                        <h1 className="font-bold text-xl pb-5">Deskripsi</h1>
+                                        <p className="text-justify">{selectedCommunity?.description}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -53,6 +53,10 @@ const BlogTypeProbs = ({
         }
     };
 
+    const relatedBlogs = blogData
+        .filter((blog) => blog.id !== data?.id)
+        .slice(0, 3);
+
     const rentangWaktu = data?.date ? hitungRentangWaktu(data.date) : 'Tanggal tidak valid';
 
     return (
@@ -176,7 +180,7 @@ const BlogTypeProbs = ({
                         </div>
                     </div>
                     <div className="grid grid-cols-3 gap-10 pt-14 mb-20">
-                        {blogData.slice(0, 3).map((blog) => (
+                        {relatedBlogs.map((blog) => (
                             <CardBlog key={blog.id} data={blog} />
                         ))}
                     </div>

@@ -76,5 +76,119 @@
     "img1": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "img2": "https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "img3": "https://images.unsplash.com/photo-1552582305-6b778426ab60?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 3,
+    "title": "Software Engineer",
+    "company": "PT CodeTech",
+    "categories": ["Teknologi", "Softwere Engineer"],
+    "logoSrc": "https://img.freepik.com/free-photo/paper-craft-art-cog-icon_53876-74769.jpg?w=826&t=st=1700848222~exp=1700848822~hmac=e50f3a144911022419e6150c6e9e115818fe316878c6101a547b3d40ae9a460f",
+    "toolsIconSrc": "/carbon_task-tools.svg",
+    "toolsName": "VS Code",
+    "timeIconSrc": "/ri_time-line.svg",
+    "timePresent": "10/12/2023",
+    "locationIconSrc": "/carbon_map.svg",
+    "locationName": "Jakarta",
+    "description": "Sebagai Software Engineer, Anda akan terlibat dalam pengembangan perangkat lunak dan pemeliharaan sistem. Tugas Anda melibatkan desain, pengkodean, pengujian, dan peningkatan aplikasi perangkat lunak. Anda akan bekerja sama dengan tim pengembang dan insinyur untuk mengembangkan solusi perangkat lunak yang efektif dan efisien sesuai dengan kebutuhan perusahaan.",
+    "detailJob": [
+      "Membuat Laki-laki atau perempuan",
+      "Usia Minimal 21 tahun",
+      "Pendidikan terakhir minimal Sarjana Teknik Informatika atau bidang terkait",
+      "Berpengalaman dalam pengembangan perangkat lunak"
+    ],
+    "kriteriaJob": [
+      "Pengalaman kerja minimal 3 tahun sebagai Software Engineer.",
+      "Penguasaan bahasa pemrograman seperti JavaScript, Python, atau Java.",
+      "Kemampuan analisis dan pemecahan masalah yang baik.",
+      "Berpengalaman dengan pengembangan aplikasi web dan mobile.",
+      "Kemampuan kerja tim dan komunikasi yang baik."
+    ],
+    "noteJob": [
+      "Berkas yang harus dilengkapi : CV, Surat Lamaran, dan Portofolio (jika ada).",
+      "Tidak dipungut biaya apapun dalam proses penerimaan karyawan baru.",
+      "Penyandang disabilitas dengan mobilitas mandiri.",
+      "Hanya pelamar yang sesuai dengan kriteria yang akan dipanggil untuk proses selanjutnya."
+    ],
+    "salaryRange": "Rp 5.000.000,00 /Bulan",
+    "email": "https://mail.google.com/",
+    "img1": "https://images.unsplash.com/photo-1581090016743-0791caf50d31?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "img2": "https://images.unsplash.com/photo-1581093804319-1c168ae68e4b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "img3": "https://images.unsplash.com/photo-1581092157699-83c90752400a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 4,
+    "title": "Digital Marketing Specialist",
+    "company": "PT DigitalPromo",
+    "categories": ["Pemasaran", "Digital Marketing"],
+    "logoSrc": "https://img.freepik.com/free-vector/flash-sale-text-mascots-vintage-retro-classic_32991-563.jpg?w=826&t=st=1700849229~exp=1700849829~hmac=6b9e45f842b8bfbe41eb990fc1dc28919ff2f52013ae2d138363cfde14ee787a",
+    "toolsIconSrc": "/carbon_task-tools.svg",
+    "toolsName": "Google Analytics",
+    "timeIconSrc": "/ri_time-line.svg",
+    "timePresent": "10/30/2023",
+    "locationIconSrc": "/carbon_map.svg",
+    "locationName": "Surabaya",
+    "description": "Sebagai Digital Marketing Specialist, Anda akan bertanggung jawab untuk merancang dan melaksanakan kampanye pemasaran digital. Tugas Anda melibatkan perencanaan strategi pemasaran, analisis data, dan optimalisasi kampanye untuk mencapai tujuan bisnis. Anda akan bekerja dengan tim pemasaran untuk meningkatkan kehadiran online perusahaan dan menciptakan strategi pemasaran yang efektif.",
+    "detailJob": [
+      "Membuat Laki-laki atau perempuan",
+      "Usia Minimal 22 tahun",
+      "Pendidikan terakhir minimal Sarjana Pemasaran atau bidang terkait",
+      "Berpengalaman dalam pemasaran digital"
+    ],
+    "kriteriaJob": [
+      "Pengalaman kerja minimal 2 tahun sebagai Digital Marketing Specialist.",
+      "Penguasaan alat-alat pemasaran digital seperti Google Ads, SEO, dan social media marketing.",
+      "Kemampuan analisis data dan interpretasi hasil kampanye.",
+      "Kreatif dan inovatif dalam merancang kampanye pemasaran.",
+      "Kemampuan komunikasi dan kolaborasi yang baik."
+    ],
+    "noteJob": [
+      "Berkas yang harus dilengkapi : CV, Surat Lamaran, dan Portofolio (jika ada).",
+      "Tidak dipungut biaya apapun dalam proses penerimaan karyawan baru.",
+      "Penyandang disabilitas dengan mobilitas mandiri.",
+      "Hanya pelamar yang sesuai dengan kriteria yang akan dipanggil untuk proses selanjutnya."
+    ],
+    "salaryRange": "Rp 4.500.000,00 /Bulan",
+    "email": "https://mail.google.com/",
+    "img1": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "img2": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "img3": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 5,
+    "title": "Software Engineer",
+    "company": "PT CodeTech",
+    "categories": ["Teknologi", "Softwere Engineer"],
+    "logoSrc": "https://img.freepik.com/free-vector/gradient-code-logo-with-tagline_23-2148811020.jpg?w=826&t=st=1700850123~exp=1700850723~hmac=eeb37aa30ccbbecd734f86bc7b49cdadebb7f9122c8736eda0099acc9a49ef9b",
+    "toolsIconSrc": "/carbon_task-tools.svg",
+    "toolsName": "JavaScript, React, Node.js",
+    "timeIconSrc": "/ri_time-line.svg",
+    "timePresent": "10/15/2023",
+    "locationIconSrc": "/carbon_map.svg",
+    "locationName": "Jakarta",
+    "description": "Sebagai Software Engineer, Anda akan menjadi bagian dari tim pengembangan perangkat lunak yang bertanggung jawab untuk merancang, mengembangkan, dan memelihara aplikasi perangkat lunak. Anda akan terlibat dalam seluruh siklus pengembangan perangkat lunak, mulai dari perencanaan hingga implementasi. Kemampuan dalam pemecahan masalah, pemikiran analitis, dan keahlian dalam pengembangan perangkat lunak akan menjadi kunci keberhasilan Anda.",
+    "detailJob": [
+      "Membuat Laki-laki atau perempuan",
+      "Usia Minimal 25 tahun",
+      "Pendidikan terakhir minimal Sarjana Teknik Informatika atau bidang terkait",
+      "Pengalaman kerja minimal 3 tahun sebagai Software Engineer"
+    ],
+    "kriteriaJob": [
+      "Pengalaman dalam pengembangan perangkat lunak menggunakan JavaScript, React, dan Node.js.",
+      "Kemampuan pemecahan masalah dan pemikiran analitis yang baik.",
+      "Pengetahuan tentang metodologi pengembangan perangkat lunak seperti Agile atau Scrum.",
+      "Kemampuan komunikasi dan kolaborasi yang baik.",
+      "Berpengalaman dalam pengujian perangkat lunak (testing)."
+    ],
+    "noteJob": [
+      "Berkas yang harus dilengkapi : CV, Surat Lamaran, dan Portofolio (jika ada).",
+      "Tidak dipungut biaya apapun dalam proses penerimaan karyawan baru.",
+      "Penyandang disabilitas dengan mobilitas mandiri.",
+      "Hanya pelamar yang sesuai dengan kriteria yang akan dipanggil untuk proses selanjutnya."
+    ],
+    "salaryRange": "Rp 8.000.000,00 /Bulan",
+    "email": "https://mail.google.com/",
+    "img1": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "img2": "https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "img3": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   }
 ]
