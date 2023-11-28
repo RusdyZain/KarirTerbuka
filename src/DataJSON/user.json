@@ -1,0 +1,21 @@
+[
+  {
+    "id": 1,
+    "nama": "Rifki Rusdi Satma Putra",
+    "nomorHP": "087865693246",
+    "email": "rifkirusdisatmaputra@gmail.com",
+    "sandi": "rusdy123",
+    "tglLahir": "06/30/2023",
+    "noWA": "087865693246",
+    "gender": "Laki-Laki",
+    "pendidikan": "Sarjana (S1)",
+    "kabupaten": "Lombok Timur",
+    "kecamatan": "Selong",
+    "ktp": "",
+    "cv": "",
+    "detail": "",
+    "minat": "",
+    "alatBantu": "",
+    "profilImg": "https://i.pinimg.com/564x/28/ed/66/28ed6690f3dda3d7f7e38fc02f9f661f.jpg"
+  }
+]

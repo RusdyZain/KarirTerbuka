@@ -17,7 +17,9 @@ export default function FormLogin() {
                     <div className="my-5">
                         <input name="number_hp" className="bg-gray-50 border border-[#526077] sm:text-sm rounded-lg block w-full p-2.5" placeholder="Nomor Telepon" required={true} />
                     </div>
-                    <input type="password" name="sandi_pengguna" placeholder="Sandi" className="bg-gray-50 border border-[#526077] sm:text-sm rounded-lg block w-full p-2.5" required={true} />
+                    <input type="Email" name="sandi_pengguna" placeholder="Email" className="bg-gray-50 border border-[#526077] sm:text-sm rounded-lg block w-full p-2.5 my-5" required={true} />
+                    <input type="password" name="sandi_pengguna" placeholder="Sandi" className="bg-gray-50 border border-[#526077] sm:text-sm rounded-lg block w-full p-2.5 my-5" required={true} />
+                    <input type="password" name="konfirmasi_sandi_pengguna" placeholder="Konfirmasi Sandi" className="bg-gray-50 border border-[#526077] sm:text-sm rounded-lg block w-full p-2.5" required={true} />
                     <button type="submit" className="mt-4 text-white bg-[#2570EB] font-medium rounded-lg text-sm px-5 py-2.5 text-center hover:duration-200 hover:bg-white hover:text-[#2570EB] hover: border-solid border-2 border-[#2570EB] w-full">Masuk</button>
                     <hr className="h-px my-8 bg-[#2570EB] border-0"></hr>
                     <button type="button" className="w-full block bg-white hover:duration-200 hover:bg-gray-100 focus:bg-gray-100 text-gray-900 font-semibold rounded-lg px-4 py-3 border border-gray-300">

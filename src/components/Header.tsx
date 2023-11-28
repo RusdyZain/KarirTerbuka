@@ -108,7 +108,7 @@ const Header = () => {
             ))}
           </ul>
         )}
-        <Link href="/" className={`lg:pr-[106px] sm:pr-10 pl-3 ${isMenuOpen ? 'hidden' : ''}`}>
+        <Link href="/profil" className={`lg:pr-[106px] sm:pr-10 pl-3 ${isMenuOpen ? 'hidden' : ''}`}>
           <Image
             src="/avatar_users.svg"
             alt="Logo Rafflesia"
