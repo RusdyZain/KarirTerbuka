@@ -14,7 +14,7 @@ const Header = () => {
     { label: 'Pekerjaan', url: '/pekerjaan' },
     { label: 'Komunitas', url: '/komunitas' },
     { label: 'Blog', url: '/blog' },
-    { label: 'Tentang', url: '/tentang' },
+    { label: 'Tentang', url: '/error/maintenance' },
   ], []);
 
   useEffect(() => {
@@ -32,7 +32,6 @@ const Header = () => {
 
     mediaQuery.addEventListener('change', handleResize);
 
-    // Update active link based on the current pathname
     const currentPathnameIndex = links.findIndex(link => link.url === router.pathname);
     if (currentPathnameIndex !== -1) {
       setActiveLink(currentPathnameIndex);
