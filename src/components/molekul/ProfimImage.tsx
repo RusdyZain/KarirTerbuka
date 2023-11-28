@@ -32,9 +32,9 @@ export default function ProfimImage() {
 
     return (
         <div>
-            <div className="w-[90%] h-[800px] flex flex-col">
+            <div className="w-[90%] h-[800px] flex flex-col mt-6">
                 <div className="bg-[#BFD7FE] h-[150px] rounded-t-lg">
-                    <div className="absolute mt-20 mx-10">
+                    <div className="absolute mt-16 mx-10">
                         {selectedUser?.profilImg && typeof selectedUser?.profilImg === 'string' && (
                             <Image
                                 src={selectedUser?.profilImg}
@@ -48,7 +48,7 @@ export default function ProfimImage() {
                 </div>
                 <div className="bg-white rounded-b-lg px-10 ml-2 grid grid-cols-2">
                     <div className="col-span-2">
-                        <div className="pb-10 mt-32">
+                        <div className="pb-10 mt-24">
                             <h1 className="font-bold text-xl pb-5">{selectedUser?.nama}</h1>
                             <hr className="h-px  bg-[#2570EB] border-0"></hr>
                             <p className="text-justify">{ }</p>
