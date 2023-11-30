@@ -100,7 +100,7 @@ export default function SubJob() {
                         )}
                     </div>
                     <hr className="h-px my-6 bg-[#64748B] border-0"></hr>
-                    <h1 className="text-3xl font-bold">Lowongan Lainnya</h1>
+                    <h1 className="text-3xl font-bold">Lowongan Terkait</h1>
                     <div className="grid grid-cols-3 gap-3 pt-6 mb-20">
                         {jobCards}
                     </div>
