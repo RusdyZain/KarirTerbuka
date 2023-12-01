@@ -14,7 +14,7 @@ const Header = () => {
     { label: 'Pekerjaan', url: '/pekerjaan' },
     { label: 'Komunitas', url: '/komunitas' },
     { label: 'Blog', url: '/blog' },
-    { label: 'Tentang', url: '/error/maintenance' },
+    { label: 'Tentang', url: '/tentang' },
   ], []);
 
   useEffect(() => {
