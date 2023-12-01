@@ -44,6 +44,12 @@ export default function FormProfil() {
         setEditedData(null);
     };
 
+    const handleCancelEdit = () => {
+        setIsEditing(false);
+        setIsEditingAll(false);
+        setEditedData(null);
+    };
+
     const handleSaveEdit = () => {
         console.log('isEditingAll:', isEditingAll);
         console.log('editedData:', editedData);
@@ -167,8 +173,16 @@ export default function FormProfil() {
                         <button
                             onClick={handleSaveEdit}
                             type="button"
-                            className="bg-blue-600 hover:bg-blue-800 text-white text-sm font-semibold font-lato p-2 py-2 px-6 w-[120px] rounded-md">
+                            className="bg-blue-600 hover:bg-blue-800 text-white text-sm font-semibold font-lato p-2 py-2 px-6 w-[120px] rounded-md border-2 border-blue-600 hover:border-blue-800"
+                        >
                             Save
+                        </button>
+                        <button
+                            onClick={handleCancelEdit}
+                            type="button"
+                            className="ml-2 bg-transparent hover:bg-blue-600 text-blue-600 hover:text-white text-sm font-semibold font-lato p-2 py-2 px-6 w-[120px] rounded-md border-2 border-blue-600"
+                        >
+                            Cancel
                         </button>
                     </div>
                 </div>

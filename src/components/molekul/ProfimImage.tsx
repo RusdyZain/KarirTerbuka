@@ -21,6 +21,7 @@ type TypeUser = {
     minat: string;
     alatBantu: string;
     profilImg: string;
+    bgProfil: string;
 }
 
 export default function ProfimImage() {
@@ -33,7 +34,17 @@ export default function ProfimImage() {
     return (
         <div>
             <div className="w-[90%] h-[800px] flex flex-col mt-6">
-                <div className="bg-[#BFD7FE] h-[150px] rounded-t-lg">
+                <div
+                    className="h-[150px] rounded-t-lg"
+                    style={{
+                        backgroundImage: selectedUser?.bgProfil
+                            ? `url(${selectedUser?.bgProfil})`
+                            : 'none',
+                        backgroundSize: 'cover',
+                        backgroundRepeat: 'no-repeat',
+                        backgroundPosition: 'center',
+                    }}
+                >
                     <div className="absolute mt-16 mx-10">
                         {selectedUser?.profilImg && typeof selectedUser?.profilImg === 'string' && (
                             <Image
@@ -46,12 +57,16 @@ export default function ProfimImage() {
                         )}
                     </div>
                 </div>
-                <div className="bg-white rounded-b-lg px-10 ml-2 grid grid-cols-2">
+
+                <div className="bg-[#DBE8FE] rounded-b-lg px-10 grid grid-cols-2">
                     <div className="col-span-2">
-                        <div className="pb-10 mt-24">
-                            <h1 className="font-bold text-xl pb-5">{selectedUser?.nama}</h1>
-                            <hr className="h-px  bg-[#2570EB] border-0"></hr>
-                            <p className="text-justify">{ }</p>
+                        <div className="pb-8 mt-24">
+                            <h1 className="font-bold text-xl pb-3">{selectedUser?.nama}</h1>
+                            <hr className="h-[2px]  bg-[#2570EB] border-0"></hr>
+                            <div className="mr-10">
+                                <p className="mt-8">Email: {selectedUser?.email}</p>
+                                <hr className="h-px  bg-[#757575] border-0"></hr>
+                            </div>
                         </div>
                     </div>
                 </div>
