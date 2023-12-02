@@ -26,8 +26,8 @@ export default function About() {
                     <Image src="/about2.png" alt="" height={500} width={1000} className="container mx-auto object-cover h-full rounded-xl marker:b-10" />
                 </div>
                 <div className="grid grid-cols-2 pt-5 container mx-auto">
-                    <div className=" grid justify-items-center">
-                        <div className="w-[17rem] border-2 border-[#526077] rounded-lg">
+                    <div className=" grid justify-items-center pr-6">
+                        <div className="w-[18rem] border-2 border-[#526077] rounded-lg">
                             <Image src="https://s3-alpha-sig.figma.com/img/5c49/feb8/81ea374cfc129cdd85c32aaeb9911ce2?Expires=1702252800&Signature=da3h4n0G3ipcGlo7H6RBAEnvjAYWfIFPd6-ES-dqiV7OdauTpWBpDbQblhnSCSO~jbMSCrG3kE9~DNt9r2tyAas0omQwuk4aX~a7Mp6f6b5UnAr5jInQbYu94OW62EhRQMWNB1MgpxeQkrH4oa2P2deIwsxhfE0lKBzzwr0xaREHV69F2SFgah4FjmfR5cHtD3GZ5TbPZk8I2WcYYd~~~rfJtOpcN81I1CF96k7le1vobjUzPnnfPELwCvhcsubnJh3krkXLk-44zO5yw1j3q85AG0uyIeol8Pm8w4EV7crdAj2e1tMhdvUNXdTpkZZeiCjWwFXfPoSGv5pW3kBzWQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="" height={500} width={1000} className="container mx-auto object-cover h-[300px] rounded-lg pb-5" />
                             <h1 className="text-2xl font-bold text-center">Rifki Rusdi Satma Putra</h1>
                             <p className="text-xl text-center pb-5 mt-2">(Project Manager)</p>
