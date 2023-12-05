@@ -1,38 +1,35 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
   directUrl = env("DIRECT_URL")
-
 }
 
 model User {
-  id        Int       @id @default(autoincrement())
-  username  String
-  email     String    @unique
-  password  String
-  googleId  String?
-  facebookId String?
-  googleLogin GoogleLogin?
+  id            Int            @id @default(autoincrement())
+  phonenumber   String
+  username      String
+  email         String         @unique
+  password      String
+  googleId      String?
+  facebookId    String?
   facebookLogin FacebookLogin?
+  googleLogin   GoogleLogin?
 }
 
 model GoogleLogin {
-  id        Int      @id @default(autoincrement())
-  googleId  String
-  userId    Int      @unique
-  user      User     @relation(fields: [userId], references: [id])
+  id       Int    @id @default(autoincrement())
+  googleId String
+  userId   Int    @unique
+  user     User   @relation(fields: [userId], references: [id])
 }
 
 model FacebookLogin {
-  id          Int      @id @default(autoincrement())
-  facebookId  String
-  userId      Int      @unique
-  user        User     @relation(fields: [userId], references: [id])
+  id         Int    @id @default(autoincrement())
+  facebookId String
+  userId     Int    @unique
+  user       User   @relation(fields: [userId], references: [id])
 }
