@@ -12,7 +12,7 @@
         "@fortawesome/fontawesome-svg-core": "^6.4.2",
         "@fortawesome/free-solid-svg-icons": "^6.4.2",
         "@fortawesome/react-fontawesome": "^0.2.0",
-        "@prisma/client": "^5.6.0",
+        "@prisma/client": "^5.7.0",
         "argon2": "^0.31.2",
         "jsonwebtoken": "^9.0.2",
         "next": "13.5.6",
@@ -33,7 +33,7 @@
         "eslint": "^8",
         "eslint-config-next": "13.5.6",
         "postcss": "^8.4.31",
-        "prisma": "^5.6.0",
+        "prisma": "^5.7.0",
         "tailwindcss": "^3.3.3",
         "typescript": "^5"
     }

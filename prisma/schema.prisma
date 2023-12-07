@@ -9,27 +9,14 @@ datasource db {
 }
 
 model User {
-  id            Int            @id @default(autoincrement())
-  phonenumber   String
-  username      String
-  email         String         @unique
+  id            Int     @id @default(autoincrement())
+  phonenumber   String? 
+  username      String?
+  email         String @unique
   password      String
   googleId      String?
   facebookId    String?
-  facebookLogin FacebookLogin?
-  googleLogin   GoogleLogin?
-}
-
-model GoogleLogin {
-  id       Int    @id @default(autoincrement())
-  googleId String
-  userId   Int    @unique
-  user     User   @relation(fields: [userId], references: [id])
-}
-
-model FacebookLogin {
-  id         Int    @id @default(autoincrement())
-  facebookId String
-  userId     Int    @unique
-  user       User   @relation(fields: [userId], references: [id])
+  googleEmail   String?
+  googleName    String?
+  googlePicture String?
 }
