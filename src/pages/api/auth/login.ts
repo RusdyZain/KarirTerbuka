@@ -14,7 +14,6 @@ export default async function handler(
   const { email, password } = req.body;
 
   try {
-    // Find user by email
     const user = await prisma.user.findUnique({
       where: { email: email },
     });
@@ -22,26 +21,22 @@ export default async function handler(
     if (!user) {
       return res.status(401).json({ message: 'Invalid email or password' });
     }
-
-    // Verify password
     const isPasswordValid = await argon2.verify(user.password, password);
 
     if (!isPasswordValid) {
       return res.status(401).json({ message: 'Invalid email or password' });
     }
-
-    // Generate JWT token
+    
     const jwtToken = jwt.sign(
       {
         userId: user.id,
         email: user.email,
       },
       process.env.NEXTAUTH_SECRET as string,
-      { expiresIn: '1h' } // Optional: Set expiration time for the token
+      { expiresIn: '1h' }
     );
 
-    // Set the token as a cookie (optional)
-    // res.setHeader('Set-Cookie', `token=${jwtToken}; HttpOnly; Path=/;`);
+    res.setHeader('Set-Cookie', `token=${jwtToken}; HttpOnly; Path=/;`);
 
     res.status(200).json({
       message: 'Login successful',

@@ -28,7 +28,7 @@ export default async function handler(
       },
     });
 
-    res.setHeader('Set-Cookie', `token=${jwtToken};`);
+    res.setHeader('Set-Cookie', `token=${jwtToken};  HttpOnly; Path=/;`);
     res.status(200).json({
       phonenumber: response.phonenumber,
       email: response.email,

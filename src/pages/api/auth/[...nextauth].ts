@@ -60,12 +60,11 @@ const authOptions: NextAuthOptions = {
           name: user.name,
           image: user.image,
         };
-        console.log(userData);
         try {
           const existingUser = await prisma.user.findUnique({
             where: { email: userData.email },
           });
-          if(!existingUser) {
+          if (!existingUser) {
             await prisma.user.create({
               data: {
                 email: userData.email,
@@ -74,11 +73,9 @@ const authOptions: NextAuthOptions = {
                 googleName: userData.name,
                 googlePicture: userData.image,
                 password: '',
-              }
-            })
+              },
+            });
           }
-          console.log(userData);
-
         } catch (error) {
           console.error('tidak bisa menambahkan akun google', error);
         }

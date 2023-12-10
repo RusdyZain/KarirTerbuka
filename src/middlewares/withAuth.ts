@@ -18,7 +18,7 @@ export default function withAuth(
         secret: process.env.NEXTAUTH_SECRET,
       });
       if (!token) {
-        const url = new URL('/', req.url);
+        const url = new URL('/login-register', req.url);
         return NextResponse.redirect(url);
       }
     }

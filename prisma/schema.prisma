@@ -10,13 +10,29 @@ datasource db {
 
 model User {
   id            Int     @id @default(autoincrement())
-  phonenumber   String? 
+  phonenumber   String?
   username      String?
-  email         String @unique
+  email         String  @unique
   password      String
   googleId      String?
   facebookId    String?
   googleEmail   String?
   googleName    String?
   googlePicture String?
+  pekerjaans    Pekerjaan[]
+}
+
+model Pekerjaan {
+  id                 String @id @default(uuid())
+  kriteria           String
+  catatan            String
+  deskripsipekerjaan String
+  detaillowongan     String
+  kategoripekerjaan  String
+  lokasi             String
+  namapekerjaan      String
+  rentanggaji        String
+  uploadgambar       String
+  userId             Int
+  user               User     @relation(fields: [userId], references: [id])
 }
