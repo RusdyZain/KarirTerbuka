@@ -43,12 +43,44 @@ async function createPekerjaan(req: NextApiRequest, res: NextApiResponse) {
     console.error('Error creating pekerjaan:', error);
     res
       .status(500)
-      .json({ message: 'Terjadi kesalahan saat membuka lowongan pekerjaan'});
-      
+      .json({ message: 'Terjadi kesalahan saat membuka lowongan pekerjaan' });
   }
 }
 
+async function updatePekerjaan(req: NextApiRequest, res: NextApiResponse) {
+  const data = req.body;
+  try {
+    const result = await prisma.pekerjaan.update({
+      where: {
+        id: data.id,
+      },
+      data: data,
+    });
+    res.status(200).json(result);
+  } catch (error) {
+    res
+      .status(500)
+      .json({ message: 'Terjadi kesalahan saat memperbarui data pekerjaan' });
+  }
+}
 
+async function deletePekerjaan(req: NextApiRequest, res: NextApiResponse) {
+  const id = req.query.id as string;
+
+  try {
+    const result = await prisma.pekerjaan.delete({
+      where: {
+        id: id,
+      },
+    });
+
+    res.status(200).json(result);
+  } catch (err) {
+    res.status(500).json({
+      message: 'Terjadi kesalahan saat menghapus pekerjaan',
+    });
+  }
+}
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
@@ -57,5 +89,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     return createPekerjaan(req, res);
   }
- 
+  if (req.method === 'PUT') {
+    return updatePekerjaan(req, res);
+  }
+  if (req.method === 'DELETE') {
+    return deletePekerjaan(req, res);
+  }
 }

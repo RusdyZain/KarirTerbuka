@@ -73,6 +73,12 @@ export default function FormLogin() {
           </button>
           <hr className="h-px my-8 bg-[#2570EB] border-0"></hr>
           <button
+          onClick={() => {
+            signIn('facebook', {
+              callbackUrl: '/',
+              redirect: false,
+            });
+          }}
             type="button"
             className="w-full block bg-white hover:duration-200 hover:bg-gray-100 focus:bg-gray-100 text-gray-900 font-semibold rounded-lg px-4 py-3 border border-gray-300"
           >

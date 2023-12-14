@@ -2,6 +2,7 @@ import { NextAuthOptions } from 'next-auth';
 import NextAuth from 'next-auth/next';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import GoogleProvider from 'next-auth/providers/google';
+import FacebookProvider from 'next-auth/providers/facebook';
 import prisma from '@/lib/prisma';
 
 const authOptions: NextAuthOptions = {
@@ -42,6 +43,10 @@ const authOptions: NextAuthOptions = {
       clientId: process.env.GOOGLE_CLIENT_ID as string,
       clientSecret: process.env.GOOGLE_SECRET_ID as string,
     }),
+    FacebookProvider({
+      clientId: process.env.FACEBOOK_CLIENT_ID as string,
+      clientSecret: process.env.FACEBOOK_SECRET_ID as string,
+    }),
   ],
   callbacks: {
     async jwt({ token, account, user }) {
@@ -60,6 +65,8 @@ const authOptions: NextAuthOptions = {
           name: user.name,
           image: user.image,
         };
+
+      
         try {
           const existingUser = await prisma.user.findUnique({
             where: { email: userData.email },
@@ -80,6 +87,12 @@ const authOptions: NextAuthOptions = {
           console.error('tidak bisa menambahkan akun google', error);
         }
         token.id = userData.id;
+      }
+
+      if (account?.provider === 'facebook' && user) {
+          data: {
+           
+          }
       }
       return token;
     },
